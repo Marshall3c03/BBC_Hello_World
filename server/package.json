@@ -1,0 +1,20 @@
+{
+  "name": "bbc_hello_world",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "seeds" : "mongo < seeds.js",
+    "start" : "node server.js",
+    "server:dev" : "nodemon server.js", 
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongodb": "^4.2.1",
+    "nodemon": "^2.0.15"
+  }
+}
