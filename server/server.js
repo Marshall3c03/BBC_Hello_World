@@ -11,6 +11,7 @@ MongoClient.connect('mongodb://localhost:27017', {useUnifiedTopology:true})
     .then((client) => {
         const db = client.db('planets');
         const planetsCollection = db.collection('planets');
+        const planetsRouter = createRouter(planetsCollection);
     })
     .catch(console.error);
 
