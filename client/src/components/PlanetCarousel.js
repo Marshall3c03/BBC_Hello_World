@@ -28,8 +28,13 @@ const PlanetCarousel = ({ slides }) => {
                return(
                    <div>
                        {index === current && (
-                       <img src={slide.image} alt="planet image" width="175px" height="175px"/>)}
-                        {/* <img src={slide.image} alt="planet image" width="175px"/> */}
+                        <div>
+                       <img src={slide.image} alt="planet image" width="175px" height="175px"/>
+                       <p>{slide.name}</p>
+                       <p>Diameter: {slide.diameter} km</p>
+                       <p>Day Length: {slide['day-length']} Hours</p>
+                       <button>View {slide.name}</button>
+                       </div>)}
                    </div>
                )
            })}
