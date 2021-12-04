@@ -8,7 +8,10 @@ const createRouter = require('./helpers/create_router');
 const MongoClient = require('mongodb').MongoClient;
 
 MongoClient.connect('mongodb://localhost:27017', {useUnifiedTopology:true})
-    .then((client) => {})
+    .then((client) => {
+        const db = client.db('planets');
+        const planetsCollection = db.collection('planets');
+    })
     .catch(console.error);
 
 app.listen(5000);
