@@ -1,19 +1,21 @@
-import React from 'react';
-import Earth from '../static/EarthAvatar.jpeg'
+import React, {useState} from 'react';
+import { PlanetSliderData } from './PlanetSliderData';
 
 const PlanetCarousel = () => {
+
+    const [current, setCurrent] = useState(3)
+    // const length = slides.length
+
+
     return(
         <div>
-            <img src={Earth} width="175px"/>
-            <ul>
-                <li>
-                    <p>Name: Earth</p>
-                </li>
-                <li>
-                    <p>Diameter: 12742km</p>
-                </li>
-            </ul>
-            <button>Select Planet</button>
+           {PlanetSliderData.map((slide, index) => {
+               return(
+                   <div>
+                        <img src={slide.image} alt="planet image" width="175px"/>
+                   </div>
+               )
+           })}
         </div>
     )
 }
