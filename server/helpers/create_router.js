@@ -7,6 +7,7 @@ const createRouter = function (collection) {
         collection
         .find()
         .toArray()
+        .then((documents) => res.send(documents))
     });
 
    return router;
