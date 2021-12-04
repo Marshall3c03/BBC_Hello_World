@@ -20,7 +20,12 @@ const createRouter = function (collection) {
         const id = req.params.id;
         collection
         .findOne({_id: ObjectID(id)})
-        .then((document) => res.json(document));
+        .then((document) => res.json(document))
+        .catch((error) => {
+            console.error(error);
+            res.status(500);
+            res.json({status: 500, error: error});
+        });
     });
 
 
