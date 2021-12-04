@@ -1,20 +1,45 @@
-import React from 'react';
-import Earth from '../static/EarthAvatar.jpeg'
+import React, {useState} from 'react';
+import { PlanetSliderData } from './PlanetSliderData';
 
-const PlanetCarousel = () => {
+const PlanetCarousel = ({ slides }) => {
+
+    const [current, setCurrent] = useState(3)
+    const length = slides.length
+
+    const nextSlide = () => {
+        setCurrent(current === length - 1 ? 0 : current + 1)
+    }
+
+    const prevSlide = () => {
+        setCurrent(current === 0 ? length - 1 : current - 1)
+    }
+
+    if (!Array.isArray(slides) || slides.length <= 0){
+        return null;
+    }
+
+    console.log(current)
+
     return(
-        <div>
-            <img src={Earth} width="175px"/>
-            <ul>
-                <li>
-                    <p>Name: Earth</p>
-                </li>
-                <li>
-                    <p>Diameter: 12742km</p>
-                </li>
-            </ul>
-            <button>Select Planet</button>
-        </div>
+        <section>
+            <img src="https://d29fhpw069ctt2.cloudfront.net/icon/image/39040/preview.png" width="35px"  onClick={prevSlide}/>
+            
+           {PlanetSliderData.map((slide, index) => {
+               return(
+                   <div>
+                       {index === current && (
+                        <div>
+                       <img src={slide.image} alt="planet image" width="175px" height="175px"/>
+                       <p>{slide.name}</p>
+                       <p>Diameter: {slide.diameter} km</p>
+                       <p>Day Length: {slide['day-length']} Hours</p>
+                       <button>View {slide.name}</button>
+                       </div>)}
+                   </div>
+               )
+           })}
+           <img src="https://d29fhpw069ctt2.cloudfront.net/icon/image/39041/preview.png" width="35px" onClick={nextSlide}/>
+        </section>
     )
 }
 
