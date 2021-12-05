@@ -5,9 +5,9 @@ import PlanetLayout from '../components/PlanetLayout';
 import { PlanetSliderData } from '../components/PlanetSliderData';
 
 const PlanetInfo = () => {
+        
     return(
         <div>
-            <PlanetLayout/>
             <PlanetCarousel slides={PlanetSliderData}/>
             <PlanetFactFile/>
         </div>

@@ -1,6 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import PlanetInfo from './PlanetInfo';
 import PlanetQuiz from './PlanetQuiz';
+
+import Logo from '../static/Hello-World-Logo.png';
+
+const HelloWorld = () => {
+
+
 import PlanetChart from '../components/PlanetChart';
 
 const HelloWorld = ({ planets }) => {
@@ -24,10 +30,11 @@ const HelloWorld = ({ planets }) => {
         .then(planetsJson => setPlanetsList(planetsJson))
     }
 
+
     return(
         <div>
-            <h1>Hello World</h1>
-            <PlanetInfo/>
+            <img src = {Logo} width = "50%"/>
+            <PlanetInfo />
             <PlanetQuiz/>
             <PlanetChart planetsList={planetsList}/>
         </div>

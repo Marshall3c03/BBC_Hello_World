@@ -22,23 +22,24 @@ const PlanetCarousel = ({ slides }) => {
 
     return(
         <section>
-            <img src="https://d29fhpw069ctt2.cloudfront.net/icon/image/39040/preview.png" width="35px"  onClick={prevSlide}/>
             
            {PlanetSliderData.map((slide, index) => {
                return(
                    <div>
-                       {index === current && (
+                        {index === current && (
                         <div>
-                       <img src={slide.image} alt="planet image" width="175px" height="175px"/>
-                       <p>{slide.name}</p>
-                       <p>Diameter: {slide.diameter} km</p>
-                       <p>Day Length: {slide['day-length']} Hours</p>
-                       <button>View {slide.name}</button>
-                       </div>)}
+                        <p><img src={slide.planet_icon} alt="planet image" width="75%"/></p>
+                        <img src="https://d29fhpw069ctt2.cloudfront.net/icon/image/39040/preview.png" width="35px"  onClick={prevSlide}/>
+                        <img src={slide.image} alt="planet image" height="175px" width="175px"/>
+                        <img src="https://d29fhpw069ctt2.cloudfront.net/icon/image/39041/preview.png" width="35px" onClick={nextSlide}/>
+                        <p>{slide.name}</p>
+                        <p>Diameter: {slide.diameter} km</p>
+                        <p>Day Length: {slide['day-length']} Hours</p>
+                        <button>View {slide.name}</button>
+                        </div>)}
                    </div>
                )
            })}
-           <img src="https://d29fhpw069ctt2.cloudfront.net/icon/image/39041/preview.png" width="35px" onClick={nextSlide}/>
         </section>
     )
 }
