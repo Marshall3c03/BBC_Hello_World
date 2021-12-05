@@ -3,10 +3,6 @@ import PlanetInfo from './PlanetInfo';
 import PlanetQuiz from './PlanetQuiz';
 
 import Logo from '../static/Hello-World-Logo.png';
-
-const HelloWorld = () => {
-
-
 import PlanetChart from '../components/PlanetChart';
 
 const HelloWorld = ({ planets }) => {
