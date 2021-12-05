@@ -4,7 +4,7 @@ db.dropDatabase('planets');
 
 db.planets.insertMany([
     {
-        "name" : "The Sun",
+        "name" : "Sun",
         "diameter" : 1392700, //km
         "distanceFromEarth" : 150000000, //km
         "moons" : [
