@@ -9,13 +9,19 @@ const HelloWorld = ({ planets }) => {
 
     useEffect(() => {
         loadPlanets(planets[0].url)
-    }, [planets])
+        console.log('planets loaded')
+        // loadPlanets(planets[1].url)
+
+        return () => {
+            console.log('planets unloaded')
+        }
+    }, [])
+
 
     const loadPlanets = url => {
         fetch(url)
         .then(result => result.json())
         .then(planetsJson => setPlanetsList(planetsJson))
-        .catch(err => console.error);//??
     }
 
     return(

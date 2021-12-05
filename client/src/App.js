@@ -5,17 +5,20 @@ import './App.css';
 
 function App() {
 
-  const solarSystemBodies = [
+  const PlanetsApi = [
+    {
+      name: "seededPlanets", 
+      url: "http://localhost:5000/api/planets"
+    },
     {
       name: "SolarBodies", 
-      // url: "https://api.le-systeme-solaire.net/rest/bodies"
-      url: "http://localhost:5000/api/planets"
-
+      url: "https://api.le-systeme-solaire.net/rest/bodies"
     }
   ]
+
   return (
     <div className="App">
-      <HelloWorld planets={solarSystemBodies}/>
+      <HelloWorld planets={PlanetsApi}/>
     </div>
   );
 }
