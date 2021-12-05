@@ -1,12 +1,14 @@
 import React from 'react';
 import PlanetInfo from './PlanetInfo';
 import PlanetQuiz from './PlanetQuiz';
+import Logo from '../static/Hello-World-Logo.png';
 
 const HelloWorld = () => {
+
     return(
         <div>
-            <h1>Hello World</h1>
-            <PlanetInfo/>
+            <img src = {Logo} width = "50%"/>
+            <PlanetInfo />
             <PlanetQuiz/>
         </div>
     )
