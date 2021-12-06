@@ -1,0 +1,18 @@
+.all-charts {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: start;
+    align-items: baseline;
+    flex-basis: 20px;
+
+}
+
+.chart-bar {
+    height: auto;
+    width: 50%;
+}
+
+.chart-polar {
+    height: auto;
+    width: 50%;
+}

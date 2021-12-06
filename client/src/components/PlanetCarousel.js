@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import Earth from '../static/Earth.png';
 
-const PlanetCarousel = ({ planets, slides }) => {
+const PlanetCarousel = ({ planets }) => {
 
     const [current, setCurrent] = useState(3)
     const length = planets.length
@@ -17,7 +17,6 @@ const PlanetCarousel = ({ planets, slides }) => {
     if (!Array.isArray(planets) || planets.length <= 0){
         return null;
     }
-
 
     return(
         <section>
