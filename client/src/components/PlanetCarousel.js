@@ -26,9 +26,9 @@ const PlanetCarousel = ({ planets, slides }) => {
                         {index === current && (
                         <div>
                             <p><img src={planet.planet_icon} alt="planet image" width="75%"/></p>
-                            <img src="https://d29fhpw069ctt2.cloudfront.net/icon/image/39040/preview.png" width="35px"  onClick={prevSlide}/>
+                            <img src={require('../static/Left-Arrow.png').default} width="35px"  onClick={prevSlide}/>
                             <img src={planet.image} alt="planet image" height="175px" width="175px"/>
-                            <img src="https://d29fhpw069ctt2.cloudfront.net/icon/image/39041/preview.png" width="35px" onClick={nextSlide}/>
+                            <img src={require('../static/Right-Arrow.png').default} width="35px" onClick={nextSlide}/>
                             <p>{planet.name}</p>
                             <p>Diameter: {planet.diameter} km</p>
                             <p>Day Length: {planet['day-length']} Hours</p>
