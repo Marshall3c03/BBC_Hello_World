@@ -1,0 +1,24 @@
+#solarsystem {
+    margin-top: 70px;
+    display: grid;
+    grid:
+        'image h3'
+        'image solarinfo';
+    grid-template-columns: 30% 70%;
+}
+
+#allplanets {
+    grid-area: image;
+    width: 80%;
+    padding: 30px;
+}
+
+div > h3 {
+    display: flex;
+    justify-content: start;
+}
+
+#solarinfo {
+    display: flex;
+    justify-content:start;
+}
