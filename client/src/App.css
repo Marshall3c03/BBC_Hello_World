@@ -6,11 +6,33 @@ body {
   color: white;
 }
 
-#planet-info {
+#planet-image {
   background-color: black;
-  border-radius: 5px;
   border: solid grey 1px;
   padding: 20px;
-  width: 75%;
+  width: 18em;
   margin: auto;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+#planet-info {
+  padding-top: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 30px;
+  background-color: grey;
+  color: black;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border: solid grey 1px;
+  width: 18em;
+  margin: auto;
+}
+
+#planet-facts {
+  background-color: black;
+  border: solid grey 1px;
+  border-radius: 5px;
+  margin: 20px;
 }
