@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import PlanetInfo from './PlanetInfo';
 import PlanetQuiz from './PlanetQuiz';
+import SolarSystem from './SolarSystem';
+
 import Logo from '../static/Hello-World-Logo.png';
 
 const HelloWorld = ({ planets }) => {
@@ -28,6 +30,7 @@ const HelloWorld = ({ planets }) => {
         <div>
             <img src = {Logo} width = "50%"/>
             <PlanetInfo planets={planetsList}/>
+            <SolarSystem/>
             <PlanetQuiz/>
         </div>
     )
