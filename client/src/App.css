@@ -6,6 +6,11 @@ body {
   color: white;
 }
 
+.arrow {
+  margin: 0;
+  
+  opacity: 50%;
+}
 
 #planet-image {
   background-color: black;
@@ -15,6 +20,7 @@ body {
   margin: auto;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
+  border-bottom: 0px;
 }
 
 #planet-info {
@@ -22,7 +28,7 @@ body {
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 30px;
-  background-color: grey;
+  background-color: white;
   color: black;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
@@ -36,4 +42,32 @@ body {
   border: solid grey 1px;
   border-radius: 5px;
   margin: 20px;
+}
+
+#planet-slide-block {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#duplicate-left {
+  z-index: 0;
+  position: absolute;
+  left: 10%;
+  opacity: 60%;
+  transform: scale(0.9) skewY(-5deg);
+}
+
+#planet-main {
+  z-index: 100;
+  margin: auto;
+  filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.344));
+}
+
+#duplicate-right {
+  z-index: 0;
+  position: absolute;
+  right: 10%;
+  opacity: 60%;
+  transform: scale(0.9) skewY(5deg);
 }
