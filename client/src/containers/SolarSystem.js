@@ -7,7 +7,7 @@ const SolarSystem = () => {
     return(
         <div id="solarsystem">
             <img id="allplanets" src={AllPlanets}/>
-            <h3>Solar System</h3>
+            <h3>The Solar System</h3>
             <SolarInfo/>
         </div>
     );

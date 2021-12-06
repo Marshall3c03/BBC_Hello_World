@@ -4,7 +4,7 @@
     grid:
         'image h3'
         'image solarinfo';
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 30% 70%;
 }
 
 #allplanets {
