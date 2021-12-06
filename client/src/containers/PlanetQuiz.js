@@ -83,18 +83,27 @@ const PlanetQuiz = () => {
         "C",
         "D"]
 
-    const handleAnsweredQuestion = (choice) => {
+    const [incorrectGuesses,setIncorrectGuesses] = useState([])
+    const [correctGuesses,setCorrectGuesses] = useState([])
+
+    const handleAnsweredQuestion = (choice, index) => {
         if (choice === currentQuestion.correctAnswer){
             const remainingAvailableQuestions = questions.filter(question => {
                 return question.phrase !== currentQuestion.phrase}
             )
             console.log("Correct")
-            setIsIncorrect(false);
-            setScore(score + 1);
-            setAnsweredQuestions([...answeredQeustions,currentQuestion])
-            setQuestions(remainingAvailableQuestions)
-            setRandomNumber(generateRandomNumber(remainingAvailableQuestions))
+            setIsIncorrect(false)
+            setTimeout(()=> {
+                setScore(score + 1);
+                setAnsweredQuestions([...answeredQeustions,currentQuestion])
+                setQuestions(remainingAvailableQuestions)
+                setRandomNumber(generateRandomNumber(remainingAvailableQuestions))
+                setIncorrectGuesses([])
+                setCorrectGuesses([])
+            },3000)
+            setCorrectGuesses([...correctGuesses, index])
         } else {
+            setIncorrectGuesses([...incorrectGuesses, index])
             console.log("Incorrect")
             setIsIncorrect(true);
         }
@@ -107,6 +116,15 @@ const PlanetQuiz = () => {
         setIsIncorrect(false);
     }
 
+    const getClassName = (index) => {
+        if (isIncorrect && incorrectGuesses.includes(index)){
+            return 'wrong-container'
+        } else if (correctGuesses.includes(index)){
+            return 'right-container'
+        } else {
+            return 'choice-container'
+        }
+    }
     return(
 
         <div className="container">
@@ -117,10 +135,10 @@ const PlanetQuiz = () => {
                     <h2 id="question">{currentQuestion.phrase}</h2>
                     {questions[randomNumber].answer.map((choice, index) => (
                         <div onClick={()=>{
-                            handleAnsweredQuestion(choice)
-                        }} className="choice-container">
+                            handleAnsweredQuestion(choice, index)
+                        }} className={getClassName(index)}>
                             <p className="choice-prefix">{optionTitles[index]}</p>
-                            <p className="choice-text">{choice}</p>
+                            <p className='choice-text'>{choice}</p>
                         </div>
                     ))}
                     {isIncorrect && <p>Sorry that's Incorrect</p>}
