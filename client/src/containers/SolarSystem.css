@@ -1,5 +1,5 @@
 #solarsystem {
-    border:skyblue solid;
+    margin-top: 70px;
     display: grid;
     grid:
         'image h3'
