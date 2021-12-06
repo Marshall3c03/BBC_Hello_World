@@ -12,6 +12,7 @@ function NavHeader(props) {
         <Link to='/home'><button>Home</button></Link>
         <Link to='/charts'><button>Charts</button></Link>
         <Link to='/quiz'><button>Quiz</button></Link>
+        <Link to='/about'><button>About</button></Link>
       </div>
     );
   }
