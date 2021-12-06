@@ -53,3 +53,7 @@ h1 {
     padding: 1.5rem;
     color: black;
 }
+
+.score {
+    justify-content: center;
+}

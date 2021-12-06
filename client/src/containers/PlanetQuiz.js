@@ -4,7 +4,10 @@ import '../static/CSS/PlanetQuiz.css'
 const PlanetQuiz = () => {
 
     const [score,setScore] = useState(0);
-    const [questions] = useState([
+    const [answeredQeustions, setAnsweredQuestions] = useState([])
+    const [isIncorrect,setIsIncorrect] = useState(false);
+    const [questions, setQuestions] = useState([
+
         {
             phrase: "Where is the asteroid belt?",
             answer: ["Between Earth and Venus", "Between Jupiter and Saturn", "Between Earth and Mars", "Between Mars and Jupiter"],
@@ -78,10 +81,15 @@ const PlanetQuiz = () => {
     const handleAnsweredQuestion = (choice) => {
         if (choice === currentQuestion.correctAnswer){
             console.log("Correct")
+            setIsIncorrect(false);
             setScore(score + 1);
-            console.log(score)
+            setAnsweredQuestions([...answeredQeustions,currentQuestion])
+            setQuestions(questions.filter(question => {
+                return question.phrase !== currentQuestion.phrase}
+            ))
         } else {
             console.log("Incorrect")
+            setIsIncorrect(true);
         }
     }
 
@@ -90,6 +98,7 @@ const PlanetQuiz = () => {
     <div className="container">
         <div id="home" className="flex-center flex-column">
             <h1>Quick Quiz!</h1>
+            <h3 className="score">Score: {score}</h3>
             <div id="game" className="justify-center flex-column">
                 <h2 id="question">{currentQuestion.phrase}</h2>
                 {questions[randomNumber].answer.map((choice, index) => (
@@ -100,6 +109,7 @@ const PlanetQuiz = () => {
                         <p className="choice-text">{choice}</p>
                     </div>
                 ))}
+                {isIncorrect && <p>Sorry that's Incorrect</p>}
             </div>
             {/* <a href="#quiz">Go To Quiz</a> */}
         </div>
