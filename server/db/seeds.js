@@ -158,6 +158,11 @@ db.solarsystem.insertMany([
             {"name": "Gonggong"}, 
             {"name": "Eris"}, 
             {"name": "Sedna"}],
-        "location": "Local Interstellar Cloud, Local Bubble, Orion–Cygnus Arm, Milky Way",
+        "location": "Local Interstellar Cloud, Local Bubble, Orion–Cygnus Arm, Milky Way", 
+        "fact1": "The hottest planet isn’t closest to the sun.",
+        "fact2": "The edge of the solar system is 1,000 times farther away than Pluto.",
+        "fact3": "Sunlight Takes Around 8 Minutes To Reach Earth.",
+        "fact4": "Space junk can move at more than 17,500 mph.",
+        "fact5": "One object on our Solar System orbits the Sun backwards."
     },       
 ]);
