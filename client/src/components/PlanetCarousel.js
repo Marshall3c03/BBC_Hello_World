@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import Earth from '../static/Earth.png';
+// import Earth from '../static/Earth.png';
 
 const PlanetCarousel = ({ planets }) => {
 
