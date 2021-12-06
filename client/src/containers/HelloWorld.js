@@ -30,7 +30,7 @@ const HelloWorld = ({ planets }) => {
     return(
         <div>
             <img src = {Logo} width = "50%"/>
-            <PlanetInfo />
+            <PlanetInfo planets={planets}/>
             <PlanetQuiz/>
             <PlanetChart planetsList={planetsList}/>
         </div>
