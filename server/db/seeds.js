@@ -15,6 +15,9 @@ db.planets.insertMany([
         "toEarthRatio": "1,300,000 Times",
         "surface-temperature" : "5505",
         "day-length" : 588, //hours
+        "fact" : "The temperature inside the Sun can reach 15 million degrees Celsius",
+        "left_planet" : "Pluto",
+        "right_planet" : "Mercury"
     },
     {
         "name" : "Mercury",
@@ -24,7 +27,10 @@ db.planets.insertMany([
         "discovered" : "265 BC",
         "toEarthRatio": "0.3 Times",
         "surface-temperature" : "-173 - 427",
-        "day-length" : 4222, //hours
+        "day-length" : 4222, //hours,
+        "fact" : "Mercury’s craters are named after famous artists, musicians and authors",
+        "left_planet" : "Sun",
+        "right_planet" : "Venus"
     },
     {
         "name" : "Venus",
@@ -35,6 +41,9 @@ db.planets.insertMany([
         "toEarthRatio": "0.9 Times",
         "surface-temperature" : "462", //degrees c
         "day-length" : 2803, //hours
+        "fact" : "Venus is the hottest planet in the solar system",
+        "left_planet" : "Mercury",
+        "right_planet" : "Earth"
     },
     {
         "name" : "Earth",
@@ -47,6 +56,9 @@ db.planets.insertMany([
         "toEarthRatio": "1 Times",
         "surface-temperature" : "-88 - 58",
         "day-length" : 24, //hours
+        "fact" : "Earth’s atmosphere protects us from meteoroids and radiation from the Sun",
+        "left_planet" : "Venus",
+        "right_planet" : "Mars"
     },
     {
         "name" : "Mars",
@@ -60,6 +72,9 @@ db.planets.insertMany([
         "toEarthRatio": "0.5 Times",
         "surface-temperature" : "-87 - -5",
         "day-length" : 25, //hours
+        "fact" : "There have been more missions to Mars than any other planet",
+        "left_planet" : "Earth",
+        "right_planet" : "Jupiter"
     },
     {
         "name" : "Jupiter",
@@ -70,6 +85,9 @@ db.planets.insertMany([
         "toEarthRatio": "11 Times",
         "surface-temperature" : "-108",
         "day-length" : 10, //hours
+        "fact" : "Jupiter has more than double the mass of all the other planets combined",
+        "left_planet" : "Mars",
+        "right_planet" : "Saturn"
     },
     {
         "name" : "Saturn",
@@ -80,6 +98,9 @@ db.planets.insertMany([
         "toEarthRatio": "9 Times",
         "surface-temperature" : "-139",
         "day-length" : 11, //hours
+        "fact" : "Saturn has more moons than any other planet in the Solar System",
+        "left_planet" : "Jupiter",
+        "right_planet" : "Uranus"
     },
     {
         "name" : "Uranus",
@@ -90,6 +111,9 @@ db.planets.insertMany([
         "toEarthRatio": "4 Times",
         "surface-temperature" : "-197",
         "day-length" : 17, //hours
+        "fact" : "Uranus has only been visited by a single spacecraft, Voyager 2",
+        "left_planet" : "Saturn",
+        "right_planet" : "Neptune"
     },
     {
         "name" : "Neptune",
@@ -100,6 +124,9 @@ db.planets.insertMany([
         "toEarthRatio": "3.9 Times",
         "surface-temperature" : "-201",
         "day-length" : 16, //hours
+        "fact" : "It takes like more than 4 hours for light to reach Neptune from the Sun",
+        "left_planet" : "Uranus",
+        "right_planet" : "Pluto"
     },
     {
         "name" : "Pluto",
@@ -110,5 +137,8 @@ db.planets.insertMany([
         "toEarthRatio": "0.2 Times",
         "surface-temperature" : "-232",
         "day-length" : 154, //hours
+        "fact" : "Pluto was reclassified in 2006 from a planet to a dwarf planet",
+        "left_planet" : "Neptune",
+        "right_planet" : "Sun"
     },
 ]);

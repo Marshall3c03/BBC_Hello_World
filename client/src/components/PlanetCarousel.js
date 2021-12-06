@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import Earth from '../static/Earth.png';
 
 const PlanetCarousel = ({ planets, slides }) => {
 
@@ -49,6 +48,7 @@ const PlanetCarousel = ({ planets, slides }) => {
                                 <p>Discovered in {planet.discovered}</p>
                                 <p>Surface Temperature {planet['surface-temperature']} &#8451;</p>
                                 <p>Size compared to Earth: {planet.toEarthRatio}</p>
+                                <p>Fun Fact: {planet.fact}</p>
                             </section>
                         </div>)}
 
