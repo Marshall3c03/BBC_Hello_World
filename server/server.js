@@ -21,6 +21,7 @@ MongoClient.connect('mongodb://127.0.0.1:27017', {useUnifiedTopology:true})
         const db = client.db('planets');
         const solarSystemCollection = db.collection('solarsystem');
         const solarSystemRouter = createRouter(solarSystemCollection);
+        app.use('/api/solarsystem', solarSystemRouter);
     });
 
 app.listen(5000);
