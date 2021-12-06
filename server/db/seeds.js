@@ -132,3 +132,32 @@ db.planets.insertMany([
         "image": 'https://sos.noaa.gov/ftp_mirror/astronomy/pluto/media/thumbnail_big.jpg'
     },
 ]);
+
+
+db.solarsystem.insertMany([
+    { 
+        "description": "The Solar System is the gravitationally bound system of the Sun and the objects that orbit it",
+        "age": "4.571 billion years",
+        "stars": [ {"name": "Sun"} ],
+        "planets": [ 
+            {"name": "Mercury"}, 
+            {"name": "Venus"}, 
+            {"name": "Earth"}, 
+            {"name": "Mars"}, 
+            {"name": "Jupiter"}, 
+            {"name": "Saturn"}, 
+            {"name": "Uranus"}, 
+            {"name": "Neptune"}],
+        "dwarf planets": [
+            {"name": "Ceres"}, 
+            {"name": "Orcus"}, 
+            {"name": "Pluto"}, 
+            {"name": "Haumea"}, 
+            {"name": "Quaoar"}, 
+            {"name": "Makemake"}, 
+            {"name": "Gonggong"}, 
+            {"name": "Eris"}, 
+            {"name": "Sedna"}],
+        "location": "Local Interstellar Cloud, Local Bubble, Orion–Cygnus Arm, Milky Way",
+    },       
+]);
