@@ -1,5 +1,8 @@
 import React from "react";
+
+//CSS ===============
 import "../static/CSS/SolarInfo.css";
+//CSS ===============
 
 const SolarInfo = () => {
     return(

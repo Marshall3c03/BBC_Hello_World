@@ -1,5 +1,9 @@
 import React, {useState} from 'react';
 
+//CSS ===============
+import '../static/CSS/PlanetCarousel.css';
+//CSS ===============
+
 const PlanetCarousel = ({ planets }) => {
 
     const [current, setCurrent] = useState(3)
@@ -17,13 +21,15 @@ const PlanetCarousel = ({ planets }) => {
         return null;
     }
 
+    console.log('carousel rendered')
+
     return(
-        <section>
-           {planets.map((planet, index) => {
-               return(
-                   <div>
-                        {index === current && (
-                        <div>
+        <>
+            {planets.map((planet, index) => {
+                return(
+                    <>
+                    {index === current && (
+                        <div className='carousel'>
                             <p><img src={planet.planet_icon} alt="planet image" width="75%"/></p>
                             <img src={require('../static/Left-Arrow.png').default} width="35px"  onClick={prevSlide}/>
                             <img src={planet.image} alt="planet image" height="175px" width="175px"/>
@@ -33,10 +39,10 @@ const PlanetCarousel = ({ planets }) => {
                             <p>Day Length: {planet['day-length']} Hours</p>
                             <button>View {planet.name}</button>
                         </div>)}
-                   </div>
-               )
-           })}
-        </section>
+                    </>
+                )
+            })}
+        </>
     )
 }
 

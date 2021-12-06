@@ -37,7 +37,7 @@ const PlanetChart = ({ planetsList }) => {
     console.log(planetNamesBar);
 
     return(
-        <div>
+        <>
             <h1>CHARTS</h1>
         <div className='all-charts'>
             <div className='chart-bar'>
@@ -84,7 +84,7 @@ const PlanetChart = ({ planetsList }) => {
             />
             </div>
         </div>
-        </div>
+        </>
     )
 }
 export default PlanetChart;

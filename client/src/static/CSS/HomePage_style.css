@@ -1,0 +1,14 @@
+.carousel-container{
+    background-color: red;
+    position: relative;
+    max-height: 100rem;
+    max-width: 100rem;
+}
+
+.solarsystem-container{
+    background-color: royalblue;
+    position: relative;
+    max-height: 100rem;
+    max-width: 100rem;
+
+}
