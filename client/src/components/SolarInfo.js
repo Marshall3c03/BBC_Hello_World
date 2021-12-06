@@ -3,7 +3,9 @@ import React from "react";
 const SolarInfo = () => {
     return(
         <div>
-            <p>Solar info</p>
+            <ul>
+                <li>Solar info</li>
+            </ul>
         </div>
     );
 };
