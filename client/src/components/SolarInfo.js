@@ -1,10 +1,11 @@
 import React from "react";
+import "./SolarInfo.css";
 
 const SolarInfo = () => {
     return(
         <div>
-            <ul>
-                <li>Solar info</li>
+            <ul id="list">
+                <li id="list-item">Solar info</li>
             </ul>
         </div>
     );
