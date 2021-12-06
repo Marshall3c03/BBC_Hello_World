@@ -5,7 +5,7 @@ const PlanetInfo = ({ planets }) => {
         
     return(
         <div>
-            <PlanetCarousel planets={planets} slides={PlanetSliderData}/>
+            <PlanetCarousel planets={planets}/>
         </div>
     )
 }
