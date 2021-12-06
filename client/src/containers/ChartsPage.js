@@ -1,7 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import PlanetInfo from './PlanetInfo';
-import PlanetQuiz from './PlanetQuiz';
-import Logo from '../static/Hello-World-Logo.png';
 import PlanetChart from '../components/PlanetChart';
 
 const ChartsPage = ({ planets }) => {
