@@ -14,7 +14,9 @@ db.planets.insertMany([
         "discovered" : "Day 1",
         "toEarthRatio": "1,300,000 Times",
         "surface-temperature" : "5505",
-        "day-length" : 588 //hours
+        "day-length" : 588, //hours
+        "planet_icon": 'https://www.storyatron.com/Hello-World/The-Sun.png',
+        "image": 'http://astronomynow.com/wp-content/uploads/2015/07/95683_web_720x614.jpg'
     },
     {
         "name" : "Mercury",
@@ -24,7 +26,9 @@ db.planets.insertMany([
         "discovered" : "265 BC",
         "toEarthRatio": "0.3 Times",
         "surface-temperature" : "-173 - 427",
-        "day-length" : 4222 //hours
+        "day-length" : 4222, //hours
+        "planet_icon": 'https://www.storyatron.com/Hello-World/Mercury.png',
+        "image": 'https://upload.wikimedia.org/wikipedia/commons/4/4a/Mercury_in_true_color.jpg'
     },
     {
         "name" : "Venus",
@@ -34,7 +38,9 @@ db.planets.insertMany([
         "discovered" : "1610",
         "toEarthRatio": "0.9 Times",
         "surface-temperature" : "462", //degrees c
-        "day-length" : 2803 //hours
+        "day-length" : 2803, //hours
+        "planet_icon": 'https://www.storyatron.com/Hello-World/Venus.png',
+        "image": 'https://upload.wikimedia.org/wikipedia/commons/0/08/Venus_from_Mariner_10.jpg'
     },
     {
         "name" : "Earth",
@@ -46,7 +52,9 @@ db.planets.insertMany([
         "discovered" : "Day 1",
         "toEarthRatio": "1 Times",
         "surface-temperature" : "-88 - 58",
-        "day-length" : 24 //hours
+        "day-length" : 24, //hours
+        "planet_icon": 'https://www.storyatron.com/Hello-World/Earth.png',
+        "image": 'https://cdn.mos.cms.futurecdn.net/yCPyoZDQBBcXikqxkeW2jJ-1200-80.jpg'
     },
     {
         "name" : "Mars",
@@ -59,7 +67,9 @@ db.planets.insertMany([
         "discovered" : "1610",
         "toEarthRatio": "0.5 Times",
         "surface-temperature" : "-87 - -5",
-        "day-length" : "25 Hours"
+        "day-length" : 25, //hours
+        "planet_icon": 'https://www.storyatron.com/Hello-World/Mars.png',
+        "image": 'https://upload.wikimedia.org/wikipedia/commons/0/02/OSIRIS_Mars_true_color.jpg'
     },
     {
         "name" : "Jupiter",
@@ -69,7 +79,9 @@ db.planets.insertMany([
         "discovered" : "1610",
         "toEarthRatio": "11 Times",
         "surface-temperature" : "-108",
-        "day-length" : 10 //hours
+        "day-length" : 10, //hours
+        "planet_icon": 'https://www.storyatron.com/Hello-World/Jupiter.png',
+        "image": 'https://upload.wikimedia.org/wikipedia/commons/2/2b/Jupiter_and_its_shrunken_Great_Red_Spot.jpg'
     },
     {
         "name" : "Saturn",
@@ -79,7 +91,9 @@ db.planets.insertMany([
         "discovered" : "1610",
         "toEarthRatio": "9 Times",
         "surface-temperature" : "-139",
-        "day-length" : 11 //hours
+        "day-length" : 11, //hours
+        "planet_icon": 'https://www.storyatron.com/Hello-World/Saturn.png',
+        "image": 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Saturn_during_Equinox.jpg/1920px-Saturn_during_Equinox.jpg'
     },
     {
         "name" : "Uranus",
@@ -89,7 +103,9 @@ db.planets.insertMany([
         "discovered" : "1781",
         "toEarthRatio": "4 Times",
         "surface-temperature" : "-197",
-        "day-length" : 17 //hours
+        "day-length" : 17, //hours
+        "planet_icon": 'https://www.storyatron.com/Hello-World/Uranus.png',
+        "image": 'https://images.theconversation.com/files/73449/original/image-20150302-5236-19u573n.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1000&fit=clip'
     },
     {
         "name" : "Neptune",
@@ -99,7 +115,9 @@ db.planets.insertMany([
         "discovered" : "1846",
         "toEarthRatio": "3.9 Times",
         "surface-temperature" : "-201",
-        "day-length" : 16 //hours
+        "day-length" : 16, //hours
+        "planet_icon": 'https://www.storyatron.com/Hello-World/Neptune.png',
+        "image": 'https://upload.wikimedia.org/wikipedia/commons/6/63/Neptune_-_Voyager_2_%2829347980845%29_flatten_crop.jpg'
     },
     {
         "name" : "Pluto",
@@ -109,6 +127,8 @@ db.planets.insertMany([
         "discovered" : "1930",
         "toEarthRatio": "0.2 Times",
         "surface-temperature" : "-232",
-        "day-length" : 154 //hours
+        "day-length" : 154, //hours
+        "planet_icon": 'https://www.storyatron.com/Hello-World/Pluto.png',
+        "image": 'https://sos.noaa.gov/ftp_mirror/astronomy/pluto/media/thumbnail_big.jpg'
     },
 ]);
