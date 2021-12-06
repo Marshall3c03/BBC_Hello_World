@@ -28,14 +28,16 @@ const PlanetCarousel = ({ slides }) => {
                    <div>
                         {index === current && (
                         <div>
-                        <p><img src={slide.planet_icon} alt="planet image" width="75%"/></p>
-                        <img src="https://d29fhpw069ctt2.cloudfront.net/icon/image/39040/preview.png" width="35px"  onClick={prevSlide}/>
-                        <img src={slide.image} alt="planet image" height="175px" width="175px"/>
-                        <img src="https://d29fhpw069ctt2.cloudfront.net/icon/image/39041/preview.png" width="35px" onClick={nextSlide}/>
-                        <p>{slide.name}</p>
-                        <p>Diameter: {slide.diameter} km</p>
-                        <p>Day Length: {slide['day-length']} Hours</p>
-                        <button>View {slide.name}</button>
+                            <p><img src={slide.planet_icon} alt="planet image" width="75%"/></p>
+                            <div>
+                                <img src = { require('../static/Left-Arrow.png').default} width="35px"  onClick={prevSlide}/>
+                                <img src={slide.image} alt="planet image" height="175px" width="175px"/>
+                                <img src = { require('../static/Right-Arrow.png').default} width="35px" onClick={nextSlide}/>
+                                <p>{slide.name}</p>
+                                <p>Diameter: {slide.diameter} km</p>
+                                <p>Day Length: {slide['day-length']} Hours</p>
+                                <button>View {slide.name}</button>
+                            </div>
                         </div>)}
                    </div>
                )
