@@ -6,5 +6,6 @@ const SolarInfo = () => {
             <p>Solar info</p>
         </div>
     );
+};
 
 export default SolarInfo;
