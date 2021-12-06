@@ -29,14 +29,15 @@ const PlanetCarousel = ({ slides }) => {
                         {index === current && (
                         <div>
                             <p><img src={slide.planet_icon} alt="planet image" width="75%"/></p>
-                            <div>
-                                <img src = { require('../static/Left-Arrow.png').default} width="35px"  onClick={prevSlide}/>
+                            <div id = "planet-info">
+                                <img src = { require('../static/Left-Arrow.png').default } width="35px"  onClick={prevSlide}/>
                                 <img src={slide.image} alt="planet image" height="175px" width="175px"/>
-                                <img src = { require('../static/Right-Arrow.png').default} width="35px" onClick={nextSlide}/>
+                                <img src = { require('../static/Right-Arrow.png').default } width="35px" onClick={nextSlide}/>
                                 <p>{slide.name}</p>
                                 <p>Diameter: {slide.diameter} km</p>
                                 <p>Day Length: {slide['day-length']} Hours</p>
                                 <button>View {slide.name}</button>
+                                <p id = "planet-facts">Cool facts here</p>
                             </div>
                         </div>)}
                    </div>

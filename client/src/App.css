@@ -5,3 +5,12 @@ body {
   background-attachment: fixed;
   color: white;
 }
+
+#planet-info {
+  background-color: black;
+  border-radius: 5px;
+  border: solid grey 1px;
+  padding: 20px;
+  width: 75%;
+  margin: auto;
+}
