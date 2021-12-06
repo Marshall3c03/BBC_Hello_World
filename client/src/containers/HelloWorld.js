@@ -28,7 +28,7 @@ const HelloWorld = ({ planets }) => {
 
     return(
         <div>
-            <img src = {Logo} width = "50%"/>
+            <img src = {Logo} width ="400px"/>
             <PlanetInfo planets={planetsList}/>
             <SolarSystem/>
             <PlanetQuiz/>

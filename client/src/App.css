@@ -6,10 +6,25 @@ body {
   color: white;
 }
 
-.arrow {
+#banner-image {
+  position: absolute;
+  z-index: 200;
+  transform: translateX(-50%);
+  top: 12%;
+}
+
+#arrow-l {
   margin: 0;
-  
-  opacity: 50%;
+  position: absolute;
+  top: 22%;
+  left: 10px;
+}
+
+#arrow-r {
+  margin: 0;
+  position: absolute;
+  top: 22%;
+  right: 10px;
 }
 
 #planet-image {
@@ -45,6 +60,7 @@ body {
 }
 
 #planet-slide-block {
+  margin-top: 20%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -53,21 +69,23 @@ body {
 #duplicate-left {
   z-index: 0;
   position: absolute;
-  left: 10%;
   opacity: 60%;
+  margin-left: 30%;
   transform: scale(0.9) skewY(-5deg);
+  right: 60%;
 }
 
 #planet-main {
-  z-index: 100;
+  z-index: 50;
   margin: auto;
   filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.344));
+  /* transform:translateX(-50%); */
 }
 
 #duplicate-right {
   z-index: 0;
   position: absolute;
-  right: 10%;
   opacity: 60%;
   transform: scale(0.9) skewY(5deg);
+  left: 60%;
 }
