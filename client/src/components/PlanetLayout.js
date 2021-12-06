@@ -25,7 +25,7 @@ const PlanetLayout = ({onPlanetClick}) => {
                 <button onClick = {onPlanetClick(Saturn)}> Saturn </button>
                 <button onClick = {onPlanetClick(Uranus)}> Uranus </button>
                 <button onClick = {onPlanetClick(Neptune)}> Neptune </button>
-                <button onClick = {onPlanetClick(Earth)}> Pluto </button>
+                <button onClick = {onPlanetClick(Pluto)}> Pluto </button>
                 </p>
             </div>
         )

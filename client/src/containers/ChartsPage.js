@@ -4,7 +4,7 @@ import PlanetQuiz from './PlanetQuiz';
 import Logo from '../static/Hello-World-Logo.png';
 import PlanetChart from '../components/PlanetChart';
 
-const HelloWorld = ({ planets }) => {
+const ChartsPage = ({ planets }) => {
 
     const [planetsList, setPlanetsList] = useState([]);
 
@@ -27,11 +27,8 @@ const HelloWorld = ({ planets }) => {
 
     return(
         <div>
-            <img src = {Logo} width = "50%"/>
-            <PlanetInfo />
-            <PlanetQuiz/>
+            <PlanetChart planetsList={planetsList}/>
         </div>
     )
 }
-
-export default HelloWorld;
+export default ChartsPage;

@@ -1,6 +1,8 @@
 import React from 'react';
 import HelloWorld from './containers/HelloWorld';
 import './App.css';
+import {Routes, Route} from 'react-router-dom'; 
+import ChartsPage from './containers/ChartsPage';
 
 
 function App() {
@@ -18,7 +20,10 @@ function App() {
 
   return (
     <div className="App">
-      <HelloWorld planets={PlanetsApi}/>
+      <Routes>
+        <Route path='/' element={<HelloWorld planets={PlanetsApi}/>} />
+        <Route path='charts' element={<ChartsPage planets={PlanetsApi}/>} />
+      </Routes>
     </div>
   );
 }
