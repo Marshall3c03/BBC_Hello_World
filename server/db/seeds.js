@@ -1,6 +1,6 @@
 use planets;
 
-db.dropDatabase('planets');
+db.dropDatabase();
 
 db.planets.insertMany([
     {
