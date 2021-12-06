@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import '../static/CSS/PlanetQuiz.css'
 
+const generateRandomNumber = (questions) => {
+    return Math.floor(Math.random()*questions.length);
+}
+
 const PlanetQuiz = () => {
 
     const [score,setScore] = useState(0);
@@ -70,7 +74,8 @@ const PlanetQuiz = () => {
         },
     ])
 
-    const randomNumber = Math.floor(Math.random()*questions.length)
+    const [randomNumber,setRandomNumber] = useState(generateRandomNumber(questions))
+
     const currentQuestion = questions[randomNumber]
     const optionTitles = [
         "A",
@@ -80,40 +85,54 @@ const PlanetQuiz = () => {
 
     const handleAnsweredQuestion = (choice) => {
         if (choice === currentQuestion.correctAnswer){
+            const remainingAvailableQuestions = questions.filter(question => {
+                return question.phrase !== currentQuestion.phrase}
+            )
             console.log("Correct")
             setIsIncorrect(false);
             setScore(score + 1);
             setAnsweredQuestions([...answeredQeustions,currentQuestion])
-            setQuestions(questions.filter(question => {
-                return question.phrase !== currentQuestion.phrase}
-            ))
+            setQuestions(remainingAvailableQuestions)
+            setRandomNumber(generateRandomNumber(remainingAvailableQuestions))
         } else {
             console.log("Incorrect")
             setIsIncorrect(true);
         }
     }
+    
+    const handleReset = () => {
+        setQuestions(answeredQeustions);
+        setAnsweredQuestions([]);
+        setScore(0);
+        setIsIncorrect(false);
+    }
 
     return(
 
-    <div className="container">
-        <div id="home" className="flex-center flex-column">
-            <h1>Quick Quiz!</h1>
-            <h3 className="score">Score: {score}</h3>
-            <div id="game" className="justify-center flex-column">
-                <h2 id="question">{currentQuestion.phrase}</h2>
-                {questions[randomNumber].answer.map((choice, index) => (
-                    <div onClick={()=>{
-                        handleAnsweredQuestion(choice)
-                    }} className="choice-container">
-                        <p className="choice-prefix">{optionTitles[index]}</p>
-                        <p className="choice-text">{choice}</p>
-                    </div>
-                ))}
-                {isIncorrect && <p>Sorry that's Incorrect</p>}
+        <div className="container">
+            <div id="home" className="flex-center flex-column">
+                <h1>Quick Planet Quiz!</h1>
+                <h3 className="score">Score: {score}</h3>
+                {questions.length > 0 ? (<div id="game" className="justify-center flex-column">
+                    <h2 id="question">{currentQuestion.phrase}</h2>
+                    {questions[randomNumber].answer.map((choice, index) => (
+                        <div onClick={()=>{
+                            handleAnsweredQuestion(choice)
+                        }} className="choice-container">
+                            <p className="choice-prefix">{optionTitles[index]}</p>
+                            <p className="choice-text">{choice}</p>
+                        </div>
+                    ))}
+                    {isIncorrect && <p>Sorry that's Incorrect</p>}
+                </div>) : 
+                (<div>
+                    <h1>Game Over</h1>
+                    <button onClick={handleReset}>Restart</button>
+                </div>)
+                }
+                {/* <a href="#quiz">Go To Quiz</a> */}
             </div>
-            {/* <a href="#quiz">Go To Quiz</a> */}
-        </div>
-    </div> 
+        </div> 
     )
 }
 
