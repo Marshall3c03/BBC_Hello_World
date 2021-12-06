@@ -3,9 +3,11 @@ import "./SolarInfo.css";
 
 const SolarInfo = () => {
     return(
-        <div>
+        <div id="solarinfo">
             <ul id="list">
-                <li id="list-item">Solar info</li>
+                <li>Solar info</li>
+                <li>Solar info</li>
+                <li>Solar info</li>
             </ul>
         </div>
     );
