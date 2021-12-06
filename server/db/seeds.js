@@ -54,7 +54,7 @@ db.planets.insertMany([
         "surface-temperature" : "-88 - 58",
         "day-length" : 24, //hours
         "planet_icon": 'https://www.storyatron.com/Hello-World/Earth.png',
-        "image": 'https://cdn.mos.cms.futurecdn.net/yCPyoZDQBBcXikqxkeW2jJ-1200-80.jpg'
+        "image": 'https://cdn.mos.cms.futurecdn.net/yCPyoZDQBBcXikqxkeW2jJ-1200-80.jpg',
     },
     {
         "name" : "Mars",
