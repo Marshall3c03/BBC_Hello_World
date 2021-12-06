@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import PlanetInfo from './PlanetInfo';
-import PlanetQuiz from './PlanetQuiz';
-import Logo from '../static/Hello-World-Logo.png';
+import PlanetChart from '../components/PlanetChart';
 
-const HelloWorld = ({ planets }) => {
+const ChartsPage = ({ planets }) => {
 
     const [planetsList, setPlanetsList] = useState([]);
 
@@ -26,11 +24,8 @@ const HelloWorld = ({ planets }) => {
 
     return(
         <div>
-            <img src = {Logo} width = "50%"/>
-            <PlanetInfo planets={planetsList}/>
-            <PlanetQuiz/>
+            <PlanetChart planetsList={planetsList}/>
         </div>
     )
 }
-
-export default HelloWorld;
+export default ChartsPage;
