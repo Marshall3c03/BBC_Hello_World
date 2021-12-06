@@ -17,8 +17,8 @@ function App() {
       url: "http://localhost:5000/api/planets"
     },
     {
-      name: "SolarBodies", 
-      url: "https://api.le-systeme-solaire.net/rest/bodies"
+      name: "SolarSystem", 
+      url: "http://localhost:5000/api/solarsystem"
     }
   ]
 
