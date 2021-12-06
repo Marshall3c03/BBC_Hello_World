@@ -3,7 +3,8 @@ import '../static/CSS/PlanetQuiz.css'
 
 const PlanetQuiz = () => {
 
-    const questions = [
+    const [score,setScore] = useState(0);
+    const [questions] = useState([
         {
             phrase: "Where is the asteroid belt?",
             answer: ["Between Earth and Venus", "Between Jupiter and Saturn", "Between Earth and Mars", "Between Mars and Jupiter"],
@@ -64,7 +65,7 @@ const PlanetQuiz = () => {
             fact: "Olympus Mons, the largest volcano in the Solar System, is on Mars.",
             correctAnswer: "Mars"
         },
-    ]
+    ])
 
     const randomNumber = Math.floor(Math.random()*questions.length)
     const currentQuestion = questions[randomNumber]
@@ -74,7 +75,15 @@ const PlanetQuiz = () => {
         "C",
         "D"]
 
-    
+    const handleAnsweredQuestion = (choice) => {
+        if (choice === currentQuestion.correctAnswer){
+            console.log("Correct")
+            setScore(score + 1);
+            console.log(score)
+        } else {
+            console.log("Incorrect")
+        }
+    }
 
     return(
 
@@ -84,7 +93,9 @@ const PlanetQuiz = () => {
             <div id="game" className="justify-center flex-column">
                 <h2 id="question">{currentQuestion.phrase}</h2>
                 {questions[randomNumber].answer.map((choice, index) => (
-                    <div className="choice-container">
+                    <div onClick={()=>{
+                        handleAnsweredQuestion(choice)
+                    }} className="choice-container">
                         <p className="choice-prefix">{optionTitles[index]}</p>
                         <p className="choice-text">{choice}</p>
                     </div>
