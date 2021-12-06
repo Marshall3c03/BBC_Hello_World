@@ -43,7 +43,7 @@ body {
 }
 
 .page-components{
-  display: inline-flex;
+  display: flex;
   /* justify-content:; */
   flex-flow: column nowrap;
   gap: 10px;

@@ -48,7 +48,7 @@ const PlanetCarousel = ({ planets }) => {
                             <p>{planet.name}</p>
                                 <p>Diameter: {planet.diameter} km</p>
                                 <p>Day Length: {planet['day-length']} Hours</p>
-                                <button onCLick = {planet.big_image}>View {planet.name}</button>
+                                <button onClick = {planet.big_image}>View {planet.name}</button>
                             </section>
                             <section id = "planet-data">
                                 <p>Discovered in {planet.discovered}</p>
