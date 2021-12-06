@@ -1,12 +1,12 @@
 import React from "react";
-import SolarSystem from "../containers/SolarSystem";
-import "./SolarInfo.css";
+import "../static/CSS/SolarInfo.css";
 
-const SolarInfo = ({solarDetails}) => {
+const SolarInfo = ({solarsystem}) => {
+    
     return(
         <div id="solarinfo">
             <ul id="list">
-                <li class="list-item"></li>
+                <li class="list-item">{solarsystem[0].age}</li>
                 <li class="list-item"></li>
                 <li class="list-item"></li>
                 <li class="list-item"></li>

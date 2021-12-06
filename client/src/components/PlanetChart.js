@@ -1,6 +1,10 @@
 import React from "react";
 import {Bar, PolarArea } from 'react-chartjs-2';
 
+//CSS ===============
+import '../static/CSS/chart_style.css';
+//CSS ===============
+
 const PlanetChart = ({ planetsList }) => {
 
     const planetNamesBar = []
@@ -35,7 +39,8 @@ const PlanetChart = ({ planetsList }) => {
     return(
         <div>
             <h1>CHARTS</h1>
-            {/* <p> ######## Chart goes here ######## </p> */}
+        <div className='all-charts'>
+            <div className='chart-bar'>
             <Bar
                 data={{
                     labels: planetNamesBar,
@@ -55,10 +60,9 @@ const PlanetChart = ({ planetsList }) => {
                 options = {{
                     indexAxis: 'y' 
                 }}
-                height={1000}
-                width={2000}
             />
-
+            </div>
+            <div className='chart-polar'>
             <PolarArea
                 data={{
                     labels: planetNamesPolar,
@@ -78,6 +82,8 @@ const PlanetChart = ({ planetsList }) => {
                 options = {{
                 }}
             />
+            </div>
+        </div>
         </div>
     )
 }
