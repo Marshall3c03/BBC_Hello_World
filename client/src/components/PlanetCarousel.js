@@ -1,10 +1,9 @@
 import React, {useState} from 'react';
-import { PlanetSliderData } from './PlanetSliderData';
 
-const PlanetCarousel = ({ slides }) => {
+const PlanetCarousel = ({ planets, slides }) => {
 
     const [current, setCurrent] = useState(3)
-    const length = slides.length
+    const length = planets.length
 
     const nextSlide = () => {
         setCurrent(current === length - 1 ? 0 : current + 1)
@@ -14,35 +13,26 @@ const PlanetCarousel = ({ slides }) => {
         setCurrent(current === 0 ? length - 1 : current - 1)
     }
 
-    if (!Array.isArray(slides) || slides.length <= 0){
+    if (!Array.isArray(planets) || planets.length <= 0){
         return null;
     }
 
-    console.log(current)
 
     return(
         <section>
-            
-           {PlanetSliderData.map((slide, index) => {
+           {planets.map((planet, index) => {
                return(
                    <div>
                         {index === current && (
                         <div>
-                            <p><img src={slide.planet_icon} alt="planet image" width="75%"/></p>
-                            <div id = "planet-image">
-                                <img src = { require('../static/Left-Arrow.png').default } width="35px"  onClick={prevSlide}/>
-                                <img src={slide.image} alt="planet image" height="175px" width="175px"/>
-                                <img src = { require('../static/Right-Arrow.png').default } width="35px" onClick={nextSlide}/>
-                            </div>
-                                <section id = "planet-info"> 
-                                    <h1>{slide.name}</h1>
-                                    <p>Diameter: {slide.diameter} km</p>
-                                    <p>Day Length: {slide['day-length']} Hours</p>
-                                    <button>View {slide.name}</button>
-                                </section>
-                                <section id = "planet-facts">
-                                    <p>Cool facts here</p>
-                                </section>
+                            <p><img src={planet.planet_icon} alt="planet image" width="75%"/></p>
+                            <img src="https://d29fhpw069ctt2.cloudfront.net/icon/image/39040/preview.png" width="35px"  onClick={prevSlide}/>
+                            <img src={planet.image} alt="planet image" height="175px" width="175px"/>
+                            <img src="https://d29fhpw069ctt2.cloudfront.net/icon/image/39041/preview.png" width="35px" onClick={nextSlide}/>
+                            <p>{planet.name}</p>
+                            <p>Diameter: {planet.diameter} km</p>
+                            <p>Day Length: {planet['day-length']} Hours</p>
+                            <button>View {planet.name}</button>
                         </div>)}
                    </div>
                )
