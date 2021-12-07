@@ -6,8 +6,9 @@
 }
 
 #banner-image {
-    /* position: absolute;
+    position: absolute;
     z-index: 200;
     transform: translateX(-50%);
-    top: 50%; */
+    top: 0;
+    width: 75%;
   }

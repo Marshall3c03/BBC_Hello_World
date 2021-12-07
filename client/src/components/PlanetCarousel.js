@@ -33,7 +33,7 @@ const PlanetCarousel = ({ planets, slides }) => {
                         {index === current && (
                             
                         <div>
-                            <p><img id="banner-image" src={require(`../static/${planet.name}.jpg`).default} alt="planet image" width="75%"/></p>
+                            <p><img id="banner-image" src={require(`../static/${planet.name}.jpg`).default} alt="planet image"/></p>
 
                             <section id = "planet-slide-block">
 

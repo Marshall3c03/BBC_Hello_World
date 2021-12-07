@@ -1,6 +1,6 @@
 import React from "react";
 import SolarInfo from "./SolarInfo";
-import AllPlanets from "../static/All Planets.png";
+import AllPlanets from "../static/All Planets.jpg";
 
 //CSS ===============
 import '../static/CSS/SolarSystem.css';

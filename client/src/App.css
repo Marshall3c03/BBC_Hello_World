@@ -6,13 +6,6 @@ body {
   color: white;
 }
 
-#banner-image {
-  position: absolute;
-  z-index: 200;
-  transform: translateX(-50%);
-  top: 12%;
-}
-
 #arrow-l {
   margin: 0;
   position: absolute;
