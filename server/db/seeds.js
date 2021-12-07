@@ -127,7 +127,7 @@ db.solarsystem.insertMany([{
             {"name": "Saturn"}, 
             {"name": "Uranus"}, 
             {"name": "Neptune"}],
-        "dwarf planets": [
+        "dwarfplanets": [
             {"name": "Ceres"}, 
             {"name": "Orcus"}, 
             {"name": "Pluto"}, 
