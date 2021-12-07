@@ -1,15 +1,24 @@
 import React, { useEffect, useState } from 'react';
 import '../static/CSS/PlanetQuiz.css'
 
-const optionTitles = [
-    "A",
-    "B",
-    "C",
-    "D"]
+    const optionTitles = [
+        "A", "B", "C", "D"
+    ]
+
+    const generateRandomNumber = (questionsList) => {
+        return Math.floor(Math.random()*questionsList.length);
+    }
 
 const PlanetQuiz = () => {
 
     const [questionsList,setQuestionsList] = useState([])
+    const [score,setScore] = useState(0);
+    const [answeredQeustions, setAnsweredQuestions] = useState([])
+    const [isIncorrect,setIsIncorrect] = useState(false);
+    const [isCorrect,setIsCorrect] = useState(false)
+    const [currentQuestion,setCurrentQuestion] = useState(null)
+    const [incorrectGuesses,setIncorrectGuesses] = useState([])
+    const [correctGuesses,setCorrectGuesses] = useState([])
 
     const loadQuestions = url => {
         fetch("http://localhost:5000/api/questions")
@@ -19,20 +28,6 @@ const PlanetQuiz = () => {
             setCurrentQuestion(questionsJson[generateRandomNumber(questionsJson)])
         })
     }
-
-    const generateRandomNumber = (questionsList) => {
-        return Math.floor(Math.random()*questionsList.length);
-    }
-
-    const [score,setScore] = useState(0);
-    const [answeredQeustions, setAnsweredQuestions] = useState([])
-    const [isIncorrect,setIsIncorrect] = useState(false);
-    const [isCorrect,setIsCorrect] = useState(false)
-
-    const [currentQuestion,setCurrentQuestion] = useState(null)
-
-    const [incorrectGuesses,setIncorrectGuesses] = useState([])
-    const [correctGuesses,setCorrectGuesses] = useState([])
 
     useEffect(()=>{
         loadQuestions();
@@ -55,7 +50,7 @@ const PlanetQuiz = () => {
                 setCorrectGuesses([])
                 setIsCorrect(false)
                 setIsIncorrect(false)
-            },100)
+            },2500)
             setCorrectGuesses([...correctGuesses, index])
         } else {
             setIncorrectGuesses([...incorrectGuesses, index])
