@@ -13,8 +13,12 @@ const SolarInfo = ({solarSystem}) => {
         }
       }
 
-      const stars = solarSystem[0].stars.map(star => {
+    const stars = solarSystem[0].stars.map(star => {
         return <p>{star.name}</p>
+    })
+
+    const planets = solarSystem[0].planets.map(planet => {
+        return <p>{planet.name},</p>
     })
 
     useEffect(() => {
@@ -28,7 +32,7 @@ const SolarInfo = ({solarSystem}) => {
                     <li class="list-item">{solarSystem[0].description}</li>
                     <li class="list-item">Age: {solarSystem[0].age}</li>
                     <li class="list-item">Stars: {stars}</li>
-                    <li class="list-item">Known planets:</li>
+                    <li class="list-item">Known planets: {planets}</li>
                     <li class="list-item">Known dwarf planets:</li>
                     <li class="list-item"></li>
                     <li class="list-item"></li>
