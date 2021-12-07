@@ -3,6 +3,7 @@ import HomePage from './containers/HomePage';
 import ChartsPage from './containers/ChartsPage';
 import PlanetQuiz from './containers/PlanetQuiz';
 import NavHeader from './components/NavHeader';
+import AboutPage from './components/AboutPage';
 import EasterEgg from './components/EasterEgg';
 import {Routes, Route} from 'react-router-dom'; 
 
@@ -57,6 +58,7 @@ function App() {
           <Route path='/home' element={<HomePage planets={planetsList} solarSystem={solarSystem}/>} />
           <Route path='charts' element={<ChartsPage planets={planetsList}/>} />
           <Route path='quiz' element={<PlanetQuiz />} />
+          <Route path='about' element={<AboutPage />} />
           <Route path='easteregg' element={<EasterEgg />}/>
         </Routes>
       </main>
