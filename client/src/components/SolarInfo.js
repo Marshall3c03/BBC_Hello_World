@@ -1,9 +1,5 @@
 import React, { useState, useEffect } from "react";
 
-//CSS ===============
-import "../static/CSS/SolarInfo.css";
-//CSS ===============
-
 const SolarInfo = ({solarSystem}) => {
     
     const [isLoaded, setIsLoaded ] = useState(false)    
