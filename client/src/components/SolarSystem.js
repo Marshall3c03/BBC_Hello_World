@@ -6,7 +6,7 @@ import AllPlanets from "../static/All Planets.jpg";
 import '../static/CSS/SolarSystem.css';
 //CSS ===============
 
-const SolarSystem = () => {
+const SolarSystem = ({solarSystem}) => {
 
     console.log('solarsystem rendered')
 

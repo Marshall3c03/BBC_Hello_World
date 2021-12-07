@@ -6,7 +6,7 @@ import SolarSystem from '../components/SolarSystem';
 import '../static/CSS/HomePage_style.css';
 //CSS ===============
 
-const HomePage = ({ planets }) => {
+const HomePage = ({ planets, solarSystem }) => {
 
     return(
         <>
@@ -14,7 +14,7 @@ const HomePage = ({ planets }) => {
                 <PlanetCarousel planets={planets}/>
             </div>
             <div className ='solarsystem-container'>
-                <SolarSystem/>
+                <SolarSystem solarSystem={solarSystem}/>
             </div>
         </>
     )
