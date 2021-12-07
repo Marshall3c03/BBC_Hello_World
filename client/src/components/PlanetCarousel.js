@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
-import '../static/CSS/PlanetCarousel.css'
+import '../static/CSS/PlanetCarousel.css';
+import {Link} from 'react-router-dom';
 
 const PlanetCarousel = ({ planets, slides }) => {
 
@@ -90,8 +91,8 @@ const PlanetCarousel = ({ planets, slides }) => {
                )
            })}
 
-        <img src = {require('../static/Star.png').default} alt="star"/>
-        
+        <Link to='/easteregg'><img id = "easteregg" src = {require('../static/Star.png').default} alt="star"/></Link>
+
         </section>
     )
 }
