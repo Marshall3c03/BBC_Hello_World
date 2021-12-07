@@ -89,6 +89,9 @@ const PlanetCarousel = ({ planets, slides }) => {
                    </>
                )
            })}
+
+        <img src = {require('../static/Star.png').default} alt="star"/>
+        
         </section>
     )
 }

@@ -3,6 +3,7 @@ import HomePage from './containers/HomePage';
 import ChartsPage from './containers/ChartsPage';
 import PlanetQuiz from './containers/PlanetQuiz';
 import NavHeader from './components/NavHeader';
+import EasterEgg from './components/EasterEgg';
 import {Routes, Route} from 'react-router-dom'; 
 
 //CSS ===============
@@ -48,6 +49,7 @@ function App() {
           <Route path='/home' element={<HomePage planets={planetsList}/>} />
           <Route path='charts' element={<ChartsPage planets={planetsList}/>} />
           <Route path='quiz' element={<PlanetQuiz />} />
+          <Route path='easteregg' element={<EasterEgg />}/>
         </Routes>
       </main>
     </div>
