@@ -1,11 +1,12 @@
 import React from "react";
-// import '../static/CSS/EasterEgg.css';
+import '../static/CSS/EasterEgg.css';
 
 
 const EasterEgg = () => {
 
     return(
-        <div>
+        <>
+        <div id = "info">
         <h1>Animals in Space!</h1>
         <p>
             Animals in space originally served to test the survivability of
@@ -21,6 +22,12 @@ const EasterEgg = () => {
             circle the Moon.
         </p>
         </div>
+
+        <img id = "monkey" src = {require('../static/Star.png').default} alt="space monkey"/>
+        <img id = "cat" src = {require('../static/Star.png').default} alt="space monkey"/>
+        <img id = "tortoise" src = {require('../static/Star.png').default} alt="space monkey"/>
+        <img id = "test" src = {require('../static/Star.png').default} alt="space monkey"/>
+        </>
     );
 };
 
