@@ -16,12 +16,12 @@ h4 {
 h1 {
     font-size: 5.4 rem;
     color: white;
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
 }
 
 .container {
     width: 100vw;
-    height: 50vh;
+    height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -45,7 +45,8 @@ h1 {
 
 .choice-prefix {
     padding:  1.5rem 2.5rem;
-    background-color: #56a5eb;
+    background-color: rgb(86, 13, 96);
+    /* background-color: #56a5eb; */
     color: white;
 }
 
@@ -74,4 +75,9 @@ h1 {
     font-size: 1.8rem;
     border: 0.1rem solid rgb(86, 165, 235, 0.25);
     background-color: rgb(62, 198, 110);
+}
+
+.fact {
+    font-size: 24px;
+    margin-top: 6%;
 }

@@ -10,6 +10,7 @@ const PlanetQuiz = () => {
     const [score,setScore] = useState(0);
     const [answeredQeustions, setAnsweredQuestions] = useState([])
     const [isIncorrect,setIsIncorrect] = useState(false);
+    const [isCorrect,setIsCorrect] = useState()
     const [questions, setQuestions] = useState([
 
         {
@@ -93,6 +94,7 @@ const PlanetQuiz = () => {
             )
             console.log("Correct")
             setIsIncorrect(false)
+            setIsCorrect(true)
             setTimeout(()=> {
                 setScore(score + 1);
                 setAnsweredQuestions([...answeredQeustions,currentQuestion])
@@ -100,6 +102,7 @@ const PlanetQuiz = () => {
                 setRandomNumber(generateRandomNumber(remainingAvailableQuestions))
                 setIncorrectGuesses([])
                 setCorrectGuesses([])
+                setIsCorrect(false)
             },3000)
             setCorrectGuesses([...correctGuesses, index])
         } else {
@@ -142,6 +145,7 @@ const PlanetQuiz = () => {
                         </div>
                     ))}
                     {isIncorrect && <p>Sorry that's Incorrect</p>}
+                    {isCorrect && <p className="fact">{currentQuestion.fact}</p>} 
                 </div>) : 
                 (<div>
                     <h1>Game Over</h1>
