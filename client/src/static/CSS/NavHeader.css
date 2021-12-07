@@ -1,0 +1,27 @@
+.Nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.Nav button {
+    Margin: 10px;
+    background-color: transparent;
+    color: white;
+    border: solid 1px white;
+    height: 40px;
+    margin-top: 20px;
+    border-radius: 20px;
+    width: 100px;
+    position: relative;
+    top: -15px;
+}
+
+/* .Nav > button > :hover {
+    background-color: white;
+    color: black;
+} */
+
+.banner-logo {
+    height: 50px;
+}
