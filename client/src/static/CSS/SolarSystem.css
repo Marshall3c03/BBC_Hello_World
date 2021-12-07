@@ -1,5 +1,5 @@
 .solarsystem {
-    /* grid-column: 1 / -1 ;
+    grid-column: 1 / -1 ;
     grid-row: 2;
     margin-top: 70px;
     display: grid;
@@ -9,11 +9,9 @@
     grid-template-columns: 30% 70%;
     position: absolute;
     margin-left: 10%;
-    margin-top: 40%; */
+    margin-top: 40%;
 
     position: relative;
-    /* height: 100%;
-    width: 100%; */
     margin: 10px;
 }
 

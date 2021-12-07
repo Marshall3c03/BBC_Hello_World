@@ -89,7 +89,8 @@ body {
   opacity: 60%;
   transform: scale(0.9) skewY(5deg);
   left: 60%;
-=======
+}
+
 .planets-container {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
