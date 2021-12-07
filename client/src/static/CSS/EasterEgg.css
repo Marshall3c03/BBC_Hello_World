@@ -55,6 +55,6 @@
   }
 
   @keyframes fly {
-    from { transform: translateX(0px) translateY(0px) rotate(30deg)}
-    to { transform: translateX(1200px) translateY(-1200px) rotate(30deg)}
+    from { transform: translateX(0px) translateY(0px) rotate(42deg)}
+    to { transform: translateX(1200px) translateY(-1200px) rotate(42deg)}
   }
