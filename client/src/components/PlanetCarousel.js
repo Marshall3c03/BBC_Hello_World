@@ -43,7 +43,7 @@ const PlanetCarousel = ({ planets, slides }) => {
                                         <img src={require(`../static/${planet.left_planet.name}-Photo.jpeg`).default} alt="planet image" height="175px" width="175px"/>
                                     </section>
                                     <section id = "planet-info">
-                                    <p>{planet.left_planet.name}</p>
+                                    <h2>{planet.left_planet.name}</h2>
                                         <p>Diameter: {planet.left_planet.diameter} km</p>
                                         <p>Day Length: {planet.left_planet.day_length} Hours</p>
                                         <button>View {planet.left_planet.name}</button>
@@ -57,7 +57,7 @@ const PlanetCarousel = ({ planets, slides }) => {
                                     <img id="arrow-r" src={require('../static/Right-Arrow.png').default} width="35px" onClick={nextSlide}/>
                                 </section>
                                 <section id = "planet-info">
-                                <p>{planet.name}</p>
+                                <h2>{planet.name}</h2>
                                     <p>Diameter: {planet.diameter} km</p>
                                     <p>Day Length: {planet['day-length']} Hours</p>
                                     <button>View {planet.name}</button>
@@ -69,7 +69,7 @@ const PlanetCarousel = ({ planets, slides }) => {
                                         <img src={require(`../static/${planet.right_planet.name}-Photo.jpeg`).default} alt="planet image" height="175px" width="175px"/>
                                     </section>
                                     <section id = "planet-info">
-                                    <p>{planet.right_planet.name}</p>
+                                    <h2>{planet.right_planet.name}</h2>
                                         <p>Diameter: {planet.right_planet.diameter} km</p>
                                         <p>Day Length: {planet.right_planet.day_length} Hours</p>
                                         <button>View {planet.right_planet.name}</button>
