@@ -13,7 +13,7 @@ const SolarInfo = ({solarSystem}) => {
 
     useEffect(() => {
         checkLoad()
-    }, [])
+    })
 
     return(
         <div id="solarinfo">
