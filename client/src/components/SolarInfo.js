@@ -1,27 +1,39 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
-//CSS ===============
-import "../static/CSS/SolarInfo.css";
-//CSS ===============
+const SolarInfo = ({solarSystem}) => {
+    
+    const [isLoaded, setIsLoaded ] = useState(false)    
+    
 
-const SolarInfo = () => {
+    const checkLoad = () => {
+        if (solarSystem.length > 0) {
+            setIsLoaded(true)
+      }}
+
+    useEffect(() => {
+        checkLoad()
+    })
+
     return(
         <div id="solarinfo">
-            <ul id="list">
-                <li class="list-item">The Solar System is the gravitationally bound system of the Sun and the objects that orbit it.</li>
-                <li class="list-item">Age: 4.571 billion years</li>
-                <li class="list-item">Stars: 1 - The Sun</li>
-                <li class="list-item">Known planets: 8 - Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune</li>
-                <li class="list-item">Known dwarf planets: 9 - Ceres, Orcus, Pluto, Haumea, Quaoar, Makemake, Gonggong, Eris, Sedna</li>
-                <li class="list-item">Location: Local Interstellar Cloud, Local Bubble, Orion–Cygnus Arm, Milky Way</li>
-                <li class="list-item">The hottest planet isn’t closest to the sun.</li>
-                <li class="list-item">The edge of the solar system is 1,000 times farther away than Pluto.</li>
-                <li class="list-item">Sunlight Takes Around 8 Minutes To Reach Earth.</li>
-                <li class="list-item">Space junk can move at more than 17,500 mph.</li>
-                <li class="list-item">One object on our Solar System orbits the Sun backwards.</li>
-            </ul>
+            {isLoaded && 
+                <ul id="list">
+                    <li class="list-item">{solarSystem[0].description}</li>
+                    <li class="list-item">Age: {solarSystem[0].age}</li>
+                    <li class="list-item">Stars: {solarSystem[0].stars.length}</li>
+                    <li class="list-item">Known planets: {solarSystem[0].planets.length}</li>
+                    <li class="list-item">Known dwarf planets: {solarSystem[0].dwarfplanets.length}</li>
+                    <li class="list-item">Location: {solarSystem[0].location}</li>
+                    <li class="list-item">Fact #1: {solarSystem[0].fact1}</li>
+                    <li class="list-item">Fact #2: {solarSystem[0].fact2}</li>
+                    <li class="list-item">Fact #3: {solarSystem[0].fact3}</li>
+                    <li class="list-item">Fact #4: {solarSystem[0].fact4}</li>
+                    <li class="list-item">Fact #5: {solarSystem[0].fact5}</li>
+                </ul>
+            }
         </div>
     );
 };
+
 
 export default SolarInfo;

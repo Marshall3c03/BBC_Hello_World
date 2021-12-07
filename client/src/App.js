@@ -19,20 +19,22 @@ function App() {
       url: "http://localhost:5000/api/planets"
     },
     {
-      name: "SolarBodies", 
-      url: "https://api.le-systeme-solaire.net/rest/bodies"
+      name: "SolarSystem", 
+      url: "http://localhost:5000/api/solarsystem"
     }
   ]
 
   const [planetsList, setPlanetsList] = useState([]);
+  const [solarSystem, setSolarSystem] = useState([]);
 
     useEffect(() => {
         loadPlanets(PlanetsApi[0].url)
-        console.log('planets loaded')
+        loadSolarSystem(PlanetsApi[1].url)
+        // console.log('planets loaded')
         // loadPlanets(planets[1].url)
 
         return () => {
-            console.log('planets unloaded')
+            // console.log('planets unloaded')
         }
     }, [])
 
@@ -41,14 +43,19 @@ function App() {
         .then(result => result.json())
         .then(planetsJson => setPlanetsList(planetsJson))
     }
-    //HAVE ALL THESE FETCHES IN ACTUAL CONTAINERS NOT IN APP.
-// DONT DO ROUTE PROPS
+
+    const loadSolarSystem = url => {
+      fetch(url)
+      .then(result => result.json())
+      .then(solarSystemJson => setSolarSystem(solarSystemJson))
+    }
+
   return (
     <div className="App">
       <NavHeader/>
       <main className='page-components'>
         <Routes>
-          <Route path='/home' element={<HomePage planets={planetsList}/>} /> 
+          <Route path='/home' element={<HomePage planets={planetsList} solarSystem={solarSystem}/>} />
           <Route path='charts' element={<ChartsPage planets={planetsList}/>} />
           <Route path='quiz' element={<PlanetQuiz />} />
           <Route path='about' element={<AboutPage />} />

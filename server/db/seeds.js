@@ -203,6 +203,38 @@ db.planets.insertMany([
     },
 ]);
 
+
+db.solarsystem.insertMany([{ 
+        "description": "The Solar System is the gravitationally bound system of the Sun and the objects that orbit it",
+        "age": "4.571 billion years",
+        "stars": [ {"name": "Sun"} ],
+        "planets": [ 
+            {"name": "Mercury"}, 
+            {"name": "Venus"}, 
+            {"name": "Earth"}, 
+            {"name": "Mars"}, 
+            {"name": "Jupiter"}, 
+            {"name": "Saturn"}, 
+            {"name": "Uranus"}, 
+            {"name": "Neptune"}],
+        "dwarfplanets": [
+            {"name": "Ceres"}, 
+            {"name": "Orcus"}, 
+            {"name": "Pluto"}, 
+            {"name": "Haumea"}, 
+            {"name": "Quaoar"}, 
+            {"name": "Makemake"}, 
+            {"name": "Gonggong"}, 
+            {"name": "Eris"}, 
+            {"name": "Sedna"}],
+        "location": "Local Interstellar Cloud, Local Bubble, Orion–Cygnus Arm, Milky Way", 
+        "fact1": "The hottest planet isn’t closest to the sun.",
+        "fact2": "The edge of the solar system is 1,000 times farther away than Pluto.",
+        "fact3": "Sunlight Takes Around 8 Minutes To Reach Earth.",
+        "fact4": "Space junk can move at more than 17,500 mph.",
+        "fact5": "One object on our Solar System orbits the Sun backwards."
+    },       
+]);
 db.questions.insertMany([
     {
         phrase: "Where is the asteroid belt?",

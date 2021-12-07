@@ -19,6 +19,9 @@ MongoClient.connect('mongodb://127.0.0.1:27017', {useUnifiedTopology:true})
 MongoClient.connect('mongodb://127.0.0.1:27017', {useUnifiedTopology:true})
     .then((client) => {
         const db = client.db('planets');
+        const solarSystemCollection = db.collection('solarsystem');
+        const solarSystemRouter = createRouter(solarSystemCollection);
+        app.use('/api/solarsystem', solarSystemRouter);
         const questionsCollection = db.collection('questions');
         const questionsRouter = createRouter(questionsCollection);
         app.use('/api/questions', questionsRouter);
