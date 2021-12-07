@@ -114,8 +114,7 @@ db.planets.insertMany([
 ]);
 
 
-db.solarsystem.insertMany([
-    { 
+db.solarsystem.insertMany([{ 
         "description": "The Solar System is the gravitationally bound system of the Sun and the objects that orbit it",
         "age": "4.571 billion years",
         "stars": [ {"name": "Sun"} ],

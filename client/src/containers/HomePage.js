@@ -2,12 +2,13 @@ import React, { useEffect, useState } from 'react';
 import PlanetCarousel from '../components/PlanetCarousel';
 import SolarSystem from '../components/SolarSystem';
 
-const HomePage = ({ planets, solarsystem }) => {
-
+const HomePage = ({ planets, solarSystem }) => {
+    
+  
     return(
         <div>
             <PlanetCarousel planets={planets}/>
-            <SolarSystem solarsystem={solarsystem}/>
+            <SolarSystem solarSystem={solarSystem}/>
         </div>
     )
 }

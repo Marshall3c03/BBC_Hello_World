@@ -28,11 +28,11 @@ function App() {
     useEffect(() => {
         loadPlanets(PlanetsApi[0].url)
         loadSolarSystem(PlanetsApi[1].url)
-        console.log('planets loaded')
+        // console.log('planets loaded')
         // loadPlanets(planets[1].url)
 
         return () => {
-            console.log('planets unloaded')
+            // console.log('planets unloaded')
         }
     }, [])
 
@@ -53,7 +53,7 @@ function App() {
       <NavHeader/>
       <main>
         <Routes>
-          <Route path='/home' element={<HomePage planets={planetsList} solarsystem={solarSystem}/>} />
+          <Route path='/home' element={<HomePage planets={planetsList} solarSystem={solarSystem}/>} />
           <Route path='charts' element={<ChartsPage planets={planetsList}/>} />
           <Route path='quiz' element={<PlanetQuiz />} />
         </Routes>
