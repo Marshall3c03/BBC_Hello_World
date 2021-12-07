@@ -1,5 +1,5 @@
 import React from "react";
-import {Bar, PolarArea } from 'react-chartjs-2';
+import {Bar, Doughnut, Radar } from 'react-chartjs-2';
 
 //CSS ===============
 import '../static/CSS/chart_style.css';
@@ -39,7 +39,7 @@ const PlanetChart = ({ planetsList }) => {
         }
     })
     const planetsDayLengths = planetsList.map((planet) => {
-        planetDayLength.push(planet.day_length)
+        planetDayLength.push(planet['day-length'])
     })
     const EarthRatios = planetsList.map((planet) => {
         if (planet.name !== 'Sun'){
@@ -47,10 +47,10 @@ const PlanetChart = ({ planetsList }) => {
         }
     })
 
-    // console.log(planetsList);
-    // console.log(planetNamesBar);
-    // console.log(planetDayLength)
-    // console.log(toEarthRatios)
+    console.log(planetsList);
+    console.log(planetNamesBar);
+    console.log(planetDayLength)
+    console.log(toEarthRatios)
     
     return(
         <>
@@ -73,7 +73,26 @@ const PlanetChart = ({ planetsList }) => {
                     }]
                 }}
                 options = {{
-                    indexAxis: 'y' 
+                    responsive: true,
+                    layout: {
+                        padding: {
+                            right: 20
+                        }
+                    },
+                    // borderColor: 'rgba(255, 255, 255, 1)',
+                    indexAxis: 'y',
+                    scales: {
+                        x: {
+                             grid: {
+                                color: 'rgba(255, 255, 255, 1)'
+                             }
+                        },
+                        y: {
+                          grid: {
+                            display: false
+                          }
+                        },
+                    }
                 }}
             />
             </div>
@@ -95,13 +114,28 @@ const PlanetChart = ({ planetsList }) => {
                     }]
                 }}
                 options = {{
-                    indexAxis: 'y' 
+                    responsive: true,
+                    scales: {
+                        x: {
+                             grid: {
+                                 display: false
+                             }
+                        },
+                        y: {
+                          grid: {
+                              color: 'rgba(255, 255, 255, 1)'
+                          }
+                        },
+                      } 
                 }}
             />
             </div>
             <div className='chart-bar'>
             <Bar
+
+                
                 data={{
+                    
                     labels: planetNames,
                     datasets:[{
                             label: 'Length of day (hrs)',
@@ -117,7 +151,15 @@ const PlanetChart = ({ planetsList }) => {
                     }]
                 }}
                 options = {{
-                    indexAxis: 'y' 
+                    minBarLength: 1,
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            display: true,
+                            align: 'bottom'
+                        }
+                    }
+               
                 }}
             />
             </div>
@@ -139,8 +181,34 @@ const PlanetChart = ({ planetsList }) => {
                     }]
                 }}
                 options = {{
-                    indexAxis: 'y' 
+                    plugins: {
+                        legend: {
+                            display: true,
+                            labels: {
+                                color: 'rgba(255, 255, 255, 1)'
+                            }
+                        }
+                    },
+                    responsive: true,
+                    indexAxis: 'y',
+                    scales: {
+                        text: 'sam',
+                        color: 'rgba(255, 255, 255, 1)',
+                        x: {
+                            
+                            color: 'rgba(255, 255, 255, 1)',
+                            grid: {
+                                color: 'rgba(255, 255, 255, 1)'
+                            },
+                        },
+                        y: {
+                          grid: {
+                            display: false
+                          }
+                        },
+                    }
                 }}
+                
             />
             </div>
         </div>

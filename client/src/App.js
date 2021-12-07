@@ -40,13 +40,14 @@ function App() {
         .then(result => result.json())
         .then(planetsJson => setPlanetsList(planetsJson))
     }
-
+    //HAVE ALL THESE FETCHES IN ACTUAL CONTAINERS NOT IN APP.
+// DONT DO ROUTE PROPS
   return (
     <div className="App">
       <NavHeader/>
       <main className='page-components'>
         <Routes>
-          <Route path='/home' element={<HomePage planets={planetsList}/>} />
+          <Route path='/home' element={<HomePage planets={planetsList}/>} /> 
           <Route path='charts' element={<ChartsPage planets={planetsList}/>} />
           <Route path='quiz' element={<PlanetQuiz />} />
           <Route path='easteregg' element={<EasterEgg />}/>
