@@ -60,6 +60,7 @@ const PlanetQuiz = () => {
                 setIncorrectGuesses([])
                 setCorrectGuesses([])
                 setIsCorrect(false)
+                setIsIncorrect(false)
             },3000)
             setCorrectGuesses([...correctGuesses, index])
         } else {
