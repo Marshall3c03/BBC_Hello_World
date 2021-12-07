@@ -16,4 +16,13 @@ MongoClient.connect('mongodb://127.0.0.1:27017', {useUnifiedTopology:true})
     })
     .catch(console.error);
 
+MongoClient.connect('mongodb://127.0.0.1:27017', {useUnifiedTopology:true})
+    .then((client) => {
+        const db = client.db('planets');
+        const questionsCollection = db.collection('questions');
+        const questionsRouter = createRouter(questionsCollection);
+        app.use('/api/questions', questionsRouter);
+    })
+    .catch(console.error);
+
 app.listen(5000);

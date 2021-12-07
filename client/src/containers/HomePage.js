@@ -19,4 +19,5 @@ const HomePage = ({ planets }) => {
         </>
     )
 }
+
 export default HomePage;
