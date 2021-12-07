@@ -1,5 +1,9 @@
 import React, {useState} from 'react';
 
+//CSS ===============
+import '../static/CSS/PlanetCarousel.css';
+//CSS ===============
+
 const PlanetCarousel = ({ planets }) => {
 
     const [current, setCurrent] = useState(3)
@@ -16,6 +20,8 @@ const PlanetCarousel = ({ planets }) => {
     if (!Array.isArray(planets) || planets.length <= 0){
         return null;
     }
+
+    console.log('carousel rendered')
 
     return(
         <section>
@@ -72,6 +78,20 @@ const PlanetCarousel = ({ planets }) => {
                                         <button>View {planet.right_planet.name}</button>
                                     </section>
                                     </div>
+
+
+                            <p><img src={require(`../static/${planet.name}.png`).default} alt="planet image" width="75%"/></p>
+                            <section id = "planet-image">
+                                <img src={require('../static/Left-Arrow.png').default} width="35px"  onClick={prevSlide}/>
+                                {console.log(planet.name)}
+                                <img src={require(`../static/${planet.name}-Photo.jpeg`).default} alt="planet image" height="175px" width="175px"/>
+                                <img src={require('../static/Right-Arrow.png').default} width="35px" onClick={nextSlide}/>
+                            </section>
+                            <section id = "planet-info">
+                            <p>{planet.name}</p>
+                                <p>Diameter: {planet.diameter} km</p>
+                                <p>Day Length: {planet['day_length']} Hours</p>
+                                <button onClick = {planet.big_image}>View {planet.name}</button>
 
                             </section>
 

@@ -59,6 +59,7 @@ body {
   margin: 20px;
 }
 
+
 #planet-slide-block {
   margin-top: 20%;
   display: flex;
@@ -88,4 +89,16 @@ body {
   opacity: 60%;
   transform: scale(0.9) skewY(5deg);
   left: 60%;
+=======
+.planets-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.page-components{
+  display: flex;
+  /* justify-content:; */
+  flex-flow: column nowrap;
+  gap: 10px;
+  margin: 20px;
 }

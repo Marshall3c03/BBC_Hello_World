@@ -12,7 +12,7 @@ db.planets.insertMany([
             { "name" : "90482 Orcus"}
         ],
         "discovered" : "Day 1",
-        "toEarthRatio": "1,300,000 Times",
+        "toEarthRatio": 1300000,
         "surface-temperature" : "5505",
         "day-length" : 588, //hours
         "fact" : "The temperature inside the Sun can reach 15 million degrees Celsius",
@@ -24,6 +24,8 @@ db.planets.insertMany([
             {"name" : "Mercury",
             "diameter" : 154,
             "day_length" : 4222}
+
+
     },
     {
         "name" : "Mercury",
@@ -31,7 +33,7 @@ db.planets.insertMany([
         "distanceFromEarth" : 77000000,
         "moons" : [],
         "discovered" : "265 BC",
-        "toEarthRatio": "0.3 Times",
+        "toEarthRatio": 0.3,
         "surface-temperature" : "-173 - 427",
         "day-length" : 4222, //hours,
         "fact" : "Mercury’s craters are named after famous artists, musicians and authors",
@@ -43,6 +45,7 @@ db.planets.insertMany([
             {"name" : "Venus",
             "diameter" : 12104,
             "day_length" : 2803}
+
     },
     {
         "name" : "Venus",
@@ -50,7 +53,7 @@ db.planets.insertMany([
         "distanceFromEarth" : 61000000, //km
         "moons" : [],
         "discovered" : "1610",
-        "toEarthRatio": "0.9 Times",
+        "toEarthRatio": 0.9,
         "surface-temperature" : "462", //degrees c
         "day-length" : 2803, //hours
         "fact" : "Venus is the hottest planet in the solar system",
@@ -62,6 +65,7 @@ db.planets.insertMany([
             {"name" : "Earth",
             "diameter" : 12742,
             "day_length" : 24}
+
     },
     {
         "name" : "Earth",
@@ -71,7 +75,7 @@ db.planets.insertMany([
             {"name" : "The Moon"}
         ],
         "discovered" : "Day 1",
-        "toEarthRatio": "1 Times",
+        "toEarthRatio": 1,
         "surface-temperature" : "-88 - 58",
         "day-length" : 24, //hours
         "fact" : "Earth’s atmosphere protects us from meteoroids and radiation from the Sun",
@@ -83,6 +87,7 @@ db.planets.insertMany([
             {"name" : "Mars",
             "diameter" : 6779,
             "day_length" : 25}
+
     },
     {
         "name" : "Mars",
@@ -93,7 +98,7 @@ db.planets.insertMany([
             {"name" : "Deimos"} 
         ],
         "discovered" : "1610",
-        "toEarthRatio": "0.5 Times",
+        "toEarthRatio": 0.5,
         "surface-temperature" : "-87 - -5",
         "day-length" : 25, //hours
         "fact" : "There have been more missions to Mars than any other planet",
@@ -112,7 +117,7 @@ db.planets.insertMany([
         "distanceFromEarth" : 588000000, //km
         "moons" : 79,
         "discovered" : "1610",
-        "toEarthRatio": "11 Times",
+        "toEarthRatio": 11,
         "surface-temperature" : "-108",
         "day-length" : 10, //hours
         "fact" : "Jupiter has more than double the mass of all the other planets combined",
@@ -131,7 +136,7 @@ db.planets.insertMany([
         "distanceFromEarth" : 1200000000, //km
         "moons" : 82,
         "discovered" : "1610",
-        "toEarthRatio": "9 Times",
+        "toEarthRatio": 9,
         "surface-temperature" : "-139",
         "day-length" : 11, //hours
         "fact" : "Saturn has more moons than any other planet in the Solar System",
@@ -150,7 +155,7 @@ db.planets.insertMany([
         "distanceFromEarth" : 2600000000, //km
         "moons" : 27,
         "discovered" : "1781",
-        "toEarthRatio": "4 Times",
+        "toEarthRatio": 4,
         "surface-temperature" : "-197",
         "day-length" : 17, //hours
         "fact" : "Uranus has only been visited by a single spacecraft, Voyager 2",
@@ -169,7 +174,7 @@ db.planets.insertMany([
         "distanceFromEarth" : 4300000000, //km
         "moons" : 14,
         "discovered" : "1846",
-        "toEarthRatio": "3.9 Times",
+        "toEarthRatio": 3.9,
         "surface-temperature" : "-201",
         "day-length" : 16, //hours
         "fact" : "It takes like more than 4 hours for light to reach Neptune from the Sun",
@@ -188,7 +193,7 @@ db.planets.insertMany([
         "distanceFromEarth" : 4280000000, //km
         "moons" : 5,
         "discovered" : "1930",
-        "toEarthRatio": "0.2 Times",
+        "toEarthRatio": 0.2,
         "surface-temperature" : "-232",
         "day-length" : 154, //hours
         "fact" : "Pluto was reclassified in 2006 from a planet to a dwarf planet",

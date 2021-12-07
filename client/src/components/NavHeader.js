@@ -6,7 +6,7 @@ import Logo from '../static/Hello-World-Logo.png';
 function NavHeader(props) {
   
     return (
-      <div className="App">
+      <div className="Nav">
         <img src = {Logo} width = "50%"/>
         <br />
         <Link to='/home'><button>Home</button></Link>
