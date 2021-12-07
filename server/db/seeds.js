@@ -24,8 +24,6 @@ db.planets.insertMany([
             {"name" : "Mercury",
             "diameter" : 154,
             "day_length" : 4222}
-
-
     },
     {
         "name" : "Mercury",
@@ -36,7 +34,7 @@ db.planets.insertMany([
         "toEarthRatio": 0.3,
         "surface-temperature" : "-173 - 427",
         "day-length" : 4222, //hours,
-        "fact" : "Mercury’s craters are named after famous artists, musicians and authors",
+        "fact" : "Mercury's craters are named after famous artists, musicians and authors",
         "left_planet" :
             {"name" : "Sun",
             "diameter" : 1392700,
@@ -78,7 +76,7 @@ db.planets.insertMany([
         "toEarthRatio": 1,
         "surface-temperature" : "-88 - 58",
         "day-length" : 24, //hours
-        "fact" : "Earth’s atmosphere protects us from meteoroids and radiation from the Sun",
+        "fact" : "Earth's atmosphere protects us from meteoroids and radiation from the Sun",
         "left_planet" :
             {"name" : "Venus",
             "diameter" : 12104,
