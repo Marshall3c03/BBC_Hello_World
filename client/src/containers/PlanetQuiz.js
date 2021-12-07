@@ -1,53 +1,42 @@
 import React, { useEffect, useState } from 'react';
 import '../static/CSS/PlanetQuiz.css'
 
-const PlanetQuiz = () => {
-
-    const [isLoaded,setIsLoaded] = useState(false)
-    const [questionsList,setQuestionsList] = useState([])
-
-    const loadQuestions = url => {
-        fetch("http://localhost:5000/api/questions")
-        .then(result => result.json())
-        .then(questionsJson => setQuestionsList(questionsJson))
-    }
-
-    const checkLoaded = (()=> {
-        if (questionsList.length > 0){
-            setIsLoaded(true)
-        }
-    })
-
-    useEffect(()=>{
-        loadQuestions();
-        checkLoaded();
-    },[questionsList])
+    const optionTitles = [
+        "A", "B", "C", "D"
+    ]
 
     const generateRandomNumber = (questionsList) => {
         return Math.floor(Math.random()*questionsList.length);
     }
 
+const PlanetQuiz = () => {
+
+    const [questionsList,setQuestionsList] = useState([])
     const [score,setScore] = useState(0);
     const [answeredQeustions, setAnsweredQuestions] = useState([])
     const [isIncorrect,setIsIncorrect] = useState(false);
-    const [isCorrect,setIsCorrect] = useState()
-
-    const [randomNumber,setRandomNumber] = useState(generateRandomNumber(questionsList))
-
-    const currentQuestion = questionsList[randomNumber]
-    const optionTitles = [
-        "A",
-        "B",
-        "C",
-        "D"]
-
+    const [isCorrect,setIsCorrect] = useState(false)
+    const [currentQuestion,setCurrentQuestion] = useState(null)
     const [incorrectGuesses,setIncorrectGuesses] = useState([])
     const [correctGuesses,setCorrectGuesses] = useState([])
+
+    const loadQuestions = url => {
+        fetch("http://localhost:5000/api/questions")
+        .then(result => result.json())
+        .then(questionsJson => {
+            setQuestionsList(questionsJson)
+            setCurrentQuestion(questionsJson[generateRandomNumber(questionsJson)])
+        })
+    }
+
+    useEffect(()=>{
+        loadQuestions();
+    },[])
 
     const handleAnsweredQuestion = (choice, index) => {
         if (choice === currentQuestion.correctAnswer){
             const remainingAvailableQuestions = questionsList.filter(question => {
-                return question.phrase !== currentQuestion.phrase}
+                return question._id !== currentQuestion._id}
             )
             console.log("Correct")
             setIsIncorrect(false)
@@ -56,12 +45,12 @@ const PlanetQuiz = () => {
                 setScore(score + 1);
                 setAnsweredQuestions([...answeredQeustions,currentQuestion])
                 setQuestionsList(remainingAvailableQuestions)
-                setRandomNumber(generateRandomNumber(remainingAvailableQuestions))
+                setCurrentQuestion(remainingAvailableQuestions[generateRandomNumber(remainingAvailableQuestions)])
                 setIncorrectGuesses([])
                 setCorrectGuesses([])
                 setIsCorrect(false)
                 setIsIncorrect(false)
-            },3000)
+            },2500)
             setCorrectGuesses([...correctGuesses, index])
         } else {
             setIncorrectGuesses([...incorrectGuesses, index])
@@ -72,11 +61,12 @@ const PlanetQuiz = () => {
     
     const handleReset = () => {
         setQuestionsList(answeredQeustions);
+        setCurrentQuestion(answeredQeustions[generateRandomNumber(answeredQeustions)])
         setAnsweredQuestions([]);
         setScore(0);
         setIsIncorrect(false);
     }
-
+    
     const getClassName = (index) => {
         if (isIncorrect && incorrectGuesses.includes(index)){
             return 'wrong-container'
@@ -89,13 +79,13 @@ const PlanetQuiz = () => {
     return(
 
         <div className="container">
-            {isLoaded && <div id="home" className="flex-center flex-column">
+            <div id="home" className="flex-center flex-column">
                 <h1>Quick Planet Quiz!</h1>
                 <h3 className="score">Score: {score}</h3>
-                {questionsList.length > 0 ? (<div id="game" className="justify-center flex-column">
+                {questionsList.length > 0 && currentQuestion? (<div id="game" className="justify-center flex-column">
                     <h2 id="question">{currentQuestion.phrase}</h2>
-                    {questionsList[randomNumber].answer.map((choice, index) => (
-                        <div onClick={()=>{
+                    {currentQuestion.answer.map((choice, index) => (
+                        <div key={choice} onClick={()=>{
                             handleAnsweredQuestion(choice, index)
                         }} className={getClassName(index)}>
                             <p className="choice-prefix">{optionTitles[index]}</p>
@@ -110,7 +100,7 @@ const PlanetQuiz = () => {
                     <button onClick={handleReset}>Restart</button>
                 </div>)
                 }
-            </div>}
+            </div>
         </div> 
     )
 }
