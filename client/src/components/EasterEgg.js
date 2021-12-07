@@ -23,10 +23,9 @@ const EasterEgg = () => {
         </p>
         </div>
 
-        <img id = "monkey" src = {require('../static/Star.png').default} alt="space monkey"/>
-        <img id = "cat" src = {require('../static/Star.png').default} alt="space monkey"/>
-        <img id = "tortoise" src = {require('../static/Star.png').default} alt="space monkey"/>
-        <img id = "test" src = {require('../static/Star.png').default} alt="space monkey"/>
+        <img id = "monkey" src = {require('../static/Monkey.png').default} alt="space monkey"/>
+        <img id = "tortoise" src = {require('../static/Tortoise.png').default} alt="space monkey"/>
+        <img id = "rocket" src = {require('../static/Rocket.png').default} alt="space monkey"/>
         </>
     );
 };
