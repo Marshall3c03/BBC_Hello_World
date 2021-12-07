@@ -1,6 +1,6 @@
 import React from "react";
-import SolarInfo from "../components/SolarInfo";
-import "./SolarSystem.css"
+import SolarInfo from "./SolarInfo";
+import '../static/CSS/SolarSystem.css';
 import AllPlanets from "../static/All Planets.png"
 
 const SolarSystem = () => {

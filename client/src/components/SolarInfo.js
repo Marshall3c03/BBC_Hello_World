@@ -1,5 +1,5 @@
 import React from "react";
-import "./SolarInfo.css";
+import "../static/CSS/SolarInfo.css";
 
 const SolarInfo = () => {
     return(
