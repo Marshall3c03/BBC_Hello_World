@@ -7,11 +7,17 @@ import '../static/CSS/chart_style.css';
 
 const PlanetChart = ({ planetsList }) => {
 
+    const planetNames = []
     const planetNamesBar = []
     const planetNamesPolar = []
     const planetDistance = []
     const planetDiameter = []
+    const planetDayLength = []
+    const toEarthRatios = []
 
+    const planetsNames = planetsList.map((planet) => {
+        planetNames.push(planet.name)
+    })
     const planetsNamesBar = planetsList.map((planet) => {
         if (planet.name !== 'Earth'){
             planetNamesBar.push(planet.name)
@@ -32,13 +38,22 @@ const PlanetChart = ({ planetsList }) => {
             planetDiameter.push(planet.diameter)
         }
     })
+    const planetsDayLengths = planetsList.map((planet) => {
+        planetDayLength.push(planet.day_length)
+    })
+    const EarthRatios = planetsList.map((planet) => {
+        if (planet.name !== 'Sun'){
+            toEarthRatios.push(planet.toEarthRatio)
+        }
+    })
 
-    console.log(planetsList);
-    console.log(planetNamesBar);
-
+    // console.log(planetsList);
+    // console.log(planetNamesBar);
+    // console.log(planetDayLength)
+    // console.log(toEarthRatios)
+    
     return(
-        <div>
-            <h1>CHARTS</h1>
+        <>
         <div className='all-charts'>
             <div className='chart-bar'>
             <Bar
@@ -63,11 +78,11 @@ const PlanetChart = ({ planetsList }) => {
             />
             </div>
             <div className='chart-polar'>
-            <PolarArea
+            <Bar
                 data={{
                     labels: planetNamesPolar,
                     datasets:[{
-                            label: 'Planet Diamete (km)',
+                            label: 'Planet Diameter (km)',
                             data: planetDiameter,
                             backgroundColor: [
                                 'rgba(255, 99, 132, 1)',
@@ -80,11 +95,56 @@ const PlanetChart = ({ planetsList }) => {
                     }]
                 }}
                 options = {{
+                    indexAxis: 'y' 
+                }}
+            />
+            </div>
+            <div className='chart-bar'>
+            <Bar
+                data={{
+                    labels: planetNames,
+                    datasets:[{
+                            label: 'Length of day (hrs)',
+                            data: planetDayLength,
+                            backgroundColor: [
+                                'rgba(255, 99, 132, 1)',
+                                'rgba(54, 162, 235, 1)',
+                                'rgba(255, 206, 86, 1)',
+                                'rgba(75, 192, 192, 1)',
+                                'rgba(153, 102, 255, 1)',
+                                'rgba(255, 159, 64, 1)'
+                            ]
+                    }]
+                }}
+                options = {{
+                    indexAxis: 'y' 
+                }}
+            />
+            </div>
+            <div className='chart-polar'>
+            <Bar
+                data={{
+                    labels: planetNamesPolar,
+                    datasets:[{
+                            label: '(times) ratio to earth ',
+                            data: toEarthRatios,
+                            backgroundColor: [
+                                'rgba(255, 99, 132, 1)',
+                                'rgba(54, 162, 235, 1)',
+                                'rgba(255, 206, 86, 1)',
+                                'rgba(75, 192, 192, 1)',
+                                'rgba(153, 102, 255, 1)',
+                                'rgba(255, 159, 64, 1)'
+                            ]
+                    }]
+                }}
+                options = {{
+                    indexAxis: 'y' 
                 }}
             />
             </div>
         </div>
-        </div>
+        </>
     )
 }
 export default PlanetChart;

@@ -1,0 +1,14 @@
+.carousel{
+    position:relative;
+    /* min-height: 100%; */
+    /* max-width: 100%; */
+    margin: 10px;
+}
+
+#banner-image {
+    position: absolute;
+    z-index: 200;
+    transform: translateX(-50%);
+    top: 0;
+    width: 75%;
+  }

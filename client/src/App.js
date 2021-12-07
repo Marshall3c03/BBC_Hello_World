@@ -44,7 +44,7 @@ function App() {
   return (
     <div className="App">
       <NavHeader/>
-      <main>
+      <main className='page-components'>
         <Routes>
           <Route path='/home' element={<HomePage planets={planetsList}/>} /> 
           <Route path='charts' element={<ChartsPage planets={planetsList}/>} />
