@@ -2,13 +2,22 @@ import React, { useEffect, useState } from 'react';
 import PlanetCarousel from '../components/PlanetCarousel';
 import SolarSystem from '../components/SolarSystem';
 
-const HomePage = ({ planets }) => {
+//CSS ===============
+import '../static/CSS/HomePage_style.css';
+//CSS ===============
+
+const HomePage = ({ planets, solarSystem }) => {
 
     return(
-        <div>
-            <PlanetCarousel planets={planets}/>
-            <SolarSystem/>
-        </div>
+        <>
+            <div className = "carousel-container">
+                <PlanetCarousel planets={planets}/>
+            </div>
+            <div className ='solarsystem-container'>
+                <SolarSystem solarSystem={solarSystem}/>
+            </div>
+        </>
     )
 }
+
 export default HomePage;

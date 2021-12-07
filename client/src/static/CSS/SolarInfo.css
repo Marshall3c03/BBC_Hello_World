@@ -1,8 +1,0 @@
-.list-item {
-    display: flex;
-    justify-content: start;
-    padding-left: 25px;
-    background-image: url(../EarthAvatar.jpeg);
-    background-size: 15px;
-    background-repeat: no-repeat;
-}

@@ -1,0 +1,72 @@
+
+#avatar {
+    object-fit: cover;
+    border-radius:50%;
+    width: 250px;
+    height: 250px;
+    border: white solid 5px;
+}
+
+.theTeam {
+    padding-top: 2.5%;
+}
+
+.avatars {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.person {
+    display: flex;
+    flex-direction: column;
+    padding: 1%;
+}
+
+h1 {
+    font-family: 'team';
+}
+
+.names {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-family: 'MyFont', sans-serif;
+}
+
+
+.brief-container {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:rgba(0, 0, 0, 0.5);
+    border-radius: 25px;
+    margin-bottom: 4.5%;
+}
+.row {
+    width: auto;
+}
+.brief-item {
+    padding: 5px;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+    font-family: 'team';
+    margin-left: 22.5% ;
+    margin-right: 22.5% ;
+}
+
+@font-face {
+    font-family: 'MyFont';
+    src: local('Rajdhani'), url(../static/CSS/FrancoisOne-Regular.ttf) format('truetype');
+  }
+
+@font-face {
+font-family: 'team';
+src: local('team'), url(../static/CSS/VarelaRound-Regular.ttf) format('truetype');
+}

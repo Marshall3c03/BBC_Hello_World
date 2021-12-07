@@ -3,6 +3,8 @@ import HomePage from './containers/HomePage';
 import ChartsPage from './containers/ChartsPage';
 import PlanetQuiz from './containers/PlanetQuiz';
 import NavHeader from './components/NavHeader';
+import AboutPage from './components/AboutPage';
+import EasterEgg from './components/EasterEgg';
 import {Routes, Route} from 'react-router-dom'; 
 
 //CSS ===============
@@ -17,20 +19,22 @@ function App() {
       url: "http://localhost:5000/api/planets"
     },
     {
-      name: "SolarBodies", 
-      url: "https://api.le-systeme-solaire.net/rest/bodies"
+      name: "SolarSystem", 
+      url: "http://localhost:5000/api/solarsystem"
     }
   ]
 
   const [planetsList, setPlanetsList] = useState([]);
+  const [solarSystem, setSolarSystem] = useState([]);
 
     useEffect(() => {
         loadPlanets(PlanetsApi[0].url)
-        console.log('planets loaded')
+        loadSolarSystem(PlanetsApi[1].url)
+        // console.log('planets loaded')
         // loadPlanets(planets[1].url)
 
         return () => {
-            console.log('planets unloaded')
+            // console.log('planets unloaded')
         }
     }, [])
 
@@ -40,14 +44,22 @@ function App() {
         .then(planetsJson => setPlanetsList(planetsJson))
     }
 
+    const loadSolarSystem = url => {
+      fetch(url)
+      .then(result => result.json())
+      .then(solarSystemJson => setSolarSystem(solarSystemJson))
+    }
+
   return (
     <div className="App">
       <NavHeader/>
-      <main>
+      <main className='page-components'>
         <Routes>
-          <Route path='/home' element={<HomePage planets={planetsList}/>} />
+          <Route path='/home' element={<HomePage planets={planetsList} solarSystem={solarSystem}/>} />
           <Route path='charts' element={<ChartsPage planets={planetsList}/>} />
           <Route path='quiz' element={<PlanetQuiz />} />
+          <Route path='about' element={<AboutPage />} />
+          <Route path='easteregg' element={<EasterEgg />}/>
         </Routes>
       </main>
     </div>

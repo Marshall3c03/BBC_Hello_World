@@ -2,8 +2,8 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: start;
-    align-items: baseline;
-    flex-basis: 20px;
+    align-items:flex-start;
+    /* flex-basis: 20px; */
 
 }
 

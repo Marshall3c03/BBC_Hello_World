@@ -1,16 +1,27 @@
-#solarsystem {
+.solarsystem {
+    grid-column: 1 / -1 ;
+    grid-row: 2;
     margin-top: 70px;
     display: grid;
     grid:
         'image h3'
         'image solarinfo';
     grid-template-columns: 30% 70%;
+    position: absolute;
+    margin-left: 10%;
+    margin-top: 40%;
+
+    position: relative;
+    margin: 10px;
+    padding: 20px;
+    border: solid grey 1px;
+    border-radius: 5px;
 }
 
 #allplanets {
     grid-area: image;
-    width: 80%;
-    padding: 30px;
+    width: 90%;
+    padding-top: 50px;
 }
 
 div > h3 {
@@ -21,4 +32,14 @@ div > h3 {
 #solarinfo {
     display: flex;
     justify-content:start;
+}
+
+.list-item {
+    
+    display: flex;
+    justify-content: start;
+    padding-left: 25px;
+    background-image: url(../EarthAvatar.jpeg);
+    background-size: 15px;
+    background-repeat: no-repeat;
 }
