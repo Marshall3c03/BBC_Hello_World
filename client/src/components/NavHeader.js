@@ -9,9 +9,10 @@ function NavHeader(props) {
       <div class = "Nav">
         <img class = "banner-logo"src = {Logo}/>
         <br />
-        <Link to='/home'><button>Home</button></Link>
+        <Link to='/home'><button id = "nav-button">Home</button></Link>
         <Link to='/charts'><button id = "nav-button">Charts</button></Link>
         <Link to='/quiz'><button id = "nav-button">Quiz</button></Link>
+        <Link to='/about'><button id = "nav-button">About</button></Link>
       </div>
     );
   }
