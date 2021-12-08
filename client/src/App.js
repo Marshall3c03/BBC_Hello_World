@@ -5,6 +5,7 @@ import PlanetQuiz from './containers/PlanetQuiz';
 import NavHeader from './components/NavHeader';
 import AboutPage from './components/AboutPage';
 import EasterEgg from './components/EasterEgg';
+import Earth from './components/Earth';
 import {Routes, Route} from 'react-router-dom'; 
 
 //CSS ===============
@@ -60,6 +61,7 @@ function App() {
           <Route path='quiz' element={<PlanetQuiz />} />
           <Route path='about' element={<AboutPage />} />
           <Route path='easteregg' element={<EasterEgg />}/>
+          <Route path='earth' element={<Earth />}/>
         </Routes>
       </main>
     </div>

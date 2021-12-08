@@ -43,10 +43,10 @@ const PlanetCarousel = ({ planets, slides }) => {
                                         <img src={require(`../static/${planet.left_planet.name}-Photo.jpeg`).default} alt="planet image" height="175px" width="175px"/>
                                     </section>
                                     <section id = "planet-info">
+                                    <button class="planet-button">View {planet.left_planet.name}</button>
                                     <h2>{planet.left_planet.name}</h2>
-                                        <p>Diameter: {planet.left_planet.diameter} km</p>
-                                        <p>Day Length: {planet.left_planet.day_length} Hours</p>
-                                        <button>View {planet.left_planet.name}</button>
+                                        <p><b>Diameter:</b> {planet.left_planet.diameter} km</p>
+                                        <p><b>Day Length:</b> {planet.left_planet.day_length} Hours</p>
                                     </section>
                                     </div>
 
@@ -57,10 +57,10 @@ const PlanetCarousel = ({ planets, slides }) => {
                                     <img id="arrow-r" src={require('../static/Right-Arrow.png').default} width="35px" onClick={nextSlide}/>
                                 </section>
                                 <section id = "planet-info">
+                                <Link to='/Earth'><button class="planet-button">View {planet.name}</button></Link>
                                 <h2>{planet.name}</h2>
-                                    <p>Diameter: {planet.diameter} km</p>
-                                    <p>Day Length: {planet['day-length']} Hours</p>
-                                    <button>View {planet.name}</button>
+                                    <p><b>Diameter:</b> {planet.diameter} km</p>
+                                    <p><b>Day Length:</b> {planet['day-length']} Hours</p>
                                 </section>
                                 </div>
 
@@ -69,20 +69,20 @@ const PlanetCarousel = ({ planets, slides }) => {
                                         <img src={require(`../static/${planet.right_planet.name}-Photo.jpeg`).default} alt="planet image" height="175px" width="175px"/>
                                     </section>
                                     <section id = "planet-info">
+                                    <button class="planet-button">View {planet.right_planet.name}</button>
                                     <h2>{planet.right_planet.name}</h2>
-                                        <p>Diameter: {planet.right_planet.diameter} km</p>
-                                        <p>Day Length: {planet.right_planet.day_length} Hours</p>
-                                        <button>View {planet.right_planet.name}</button>
+                                        <p><b>Diameter:</b> {planet.right_planet.diameter} km</p>
+                                        <p><b>Day Length:</b> {planet.right_planet.day_length} Hours</p>
                                     </section>
                                     </div>
 
                             </section>
 
                             <section id = "planet-data">
-                                <p>Discovered in {planet.discovered}</p>
-                                <p>Surface Temperature {planet['surface-temperature']} &#8451;</p>
-                                <p>Size compared to Earth: {planet.toEarthRatio}</p>
-                                <p>Fun Fact: {planet.fact}</p>
+                                <button>Discovered: {planet.discovered}</button>
+                                <button>Surface Temperature: {planet['surface-temperature']}&#8451;</button>
+                                <button>Size compared to Earth: {planet.toEarthRatio}x</button>
+                                <p><br/><b>FUN FACT</b><br/> {planet.fact}</p>
                             </section>
                         </div>)}
 
@@ -91,7 +91,6 @@ const PlanetCarousel = ({ planets, slides }) => {
                )
            })}
 
-        <Link to='/easteregg'><img id = "easteregg" src = {require('../static/Star.png').default} alt="star"/></Link>
 
         </section>
     )
