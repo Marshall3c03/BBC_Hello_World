@@ -57,7 +57,7 @@ const PlanetCarousel = ({ planets, slides }) => {
                                     <img id="arrow-r" src={require('../static/Right-Arrow.png').default} width="35px" onClick={nextSlide}/>
                                 </section>
                                 <section id = "planet-info">
-                                <Link to='/Earth'><button class="planet-button">View {planet.name}</button></Link>
+                                <Link to={`/${planet.name}`}><button class="planet-button">View {planet.name}</button></Link>
                                 <h2>{planet.name}</h2>
                                     <p><b>Diameter:</b> {planet.diameter} km</p>
                                     <p><b>Day Length:</b> {planet['day-length']} Hours</p>

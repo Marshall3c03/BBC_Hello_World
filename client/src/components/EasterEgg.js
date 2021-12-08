@@ -1,11 +1,19 @@
 import React from "react";
 import '../static/CSS/EasterEgg.css';
+import Monkey from '../static/Monkey.wav';
 
 
 const EasterEgg = () => {
 
+    const monkey = new Audio (Monkey);
+
+   React.useEffect(() => {
+       monkey.play()
+   }, [])
+
     return(
         <>
+        <audio src="mysong.mp3" id="my_audio" autoplay="autoplay"></audio>
         <div id = "info">
         <h1>Animals in Space!</h1>
         <p>
