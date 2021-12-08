@@ -1,5 +1,5 @@
 import React from "react";
-import {Bar, Doughnut, Radar } from 'react-chartjs-2';
+import {Bar} from 'react-chartjs-2';
 
 //CSS ===============
 import '../static/CSS/chart_style.css';
@@ -63,16 +63,27 @@ const PlanetChart = ({ planetsList }) => {
                             label: 'Distance from Earth (km)',
                             data: planetDistance,
                             backgroundColor: [
-                                'rgba(255, 99, 132, 1)',
-                                'rgba(54, 162, 235, 1)',
-                                'rgba(255, 206, 86, 1)',
-                                'rgba(75, 192, 192, 1)',
-                                'rgba(153, 102, 255, 1)',
-                                'rgba(255, 159, 64, 1)'
+                                'rgba(224, 12, 9, 1)',
+                                'rgba(252, 171, 16, 1)',
+                                'rgba(252, 171, 100, 1)',
+                                'rgba(4, 114, 77, 1)',
+                                'rgba(0, 168, 120, 1)',
+                                'rgba(60, 145, 230, 1)',
+                                'rgba(66, 202, 253,  1)',
+                                'rgba(148, 75, 187,  1)',
+                                'rgba(164, 145, 211,  1)',
                             ]
                     }]
                 }}
                 options = {{
+                    plugins: {
+                        legend: {
+                            display: true,
+                            labels: {
+                                color: 'rgba(255, 255, 255, 1)'
+                            }
+                        }
+                    },
                     responsive: true,
                     layout: {
                         padding: {
@@ -83,11 +94,17 @@ const PlanetChart = ({ planetsList }) => {
                     indexAxis: 'y',
                     scales: {
                         x: {
-                             grid: {
+                            ticks: {
                                 color: 'rgba(255, 255, 255, 1)'
+                            },
+                             grid: {
+                                color: 'rgba(255, 255, 255, 0.5)'
                              }
                         },
                         y: {
+                            ticks: {
+                                color: 'rgba(255, 255, 255, 1)'
+                            },
                           grid: {
                             display: false
                           }
@@ -104,26 +121,43 @@ const PlanetChart = ({ planetsList }) => {
                             label: 'Planet Diameter (km)',
                             data: planetDiameter,
                             backgroundColor: [
-                                'rgba(255, 99, 132, 1)',
-                                'rgba(54, 162, 235, 1)',
-                                'rgba(255, 206, 86, 1)',
-                                'rgba(75, 192, 192, 1)',
-                                'rgba(153, 102, 255, 1)',
-                                'rgba(255, 159, 64, 1)'
+                                'rgba(224, 12, 9, 1)',
+                                'rgba(252, 171, 16, 1)',
+                                'rgba(252, 171, 100, 1)',
+                                'rgba(4, 114, 77, 1)',
+                                'rgba(0, 168, 120, 1)',
+                                'rgba(60, 145, 230, 1)',
+                                'rgba(66, 202, 253,  1)',
+                                'rgba(148, 75, 187,  1)',
+                                'rgba(164, 145, 211,  1)',
                             ]
                     }]
                 }}
                 options = {{
+                    plugins: {
+                        legend: {
+                            display: true,
+                            labels: {
+                                color: 'rgba(255, 255, 255, 1)'
+                            }
+                        }
+                    },
                     responsive: true,
                     scales: {
                         x: {
+                            ticks: {
+                                color: 'rgba(255, 255, 255, 1)'
+                            },
                              grid: {
                                  display: false
                              }
                         },
                         y: {
+                            ticks: {
+                                color: 'rgba(255, 255, 255, 1)'
+                            },
                           grid: {
-                              color: 'rgba(255, 255, 255, 1)'
+                              color: 'rgba(255, 255, 255, 0.5)'
                           }
                         },
                       } 
@@ -132,35 +166,57 @@ const PlanetChart = ({ planetsList }) => {
             </div>
             <div className='chart-three'>
             <Bar
-
-                
                 data={{
-                    
                     labels: planetNames,
                     datasets:[{
                             label: 'Length of day (hrs)',
                             data: planetDayLength,
                             backgroundColor: [
-                                'rgba(255, 99, 132, 1)',
-                                'rgba(54, 162, 235, 1)',
-                                'rgba(255, 206, 86, 1)',
-                                'rgba(75, 192, 192, 1)',
-                                'rgba(153, 102, 255, 1)',
-                                'rgba(255, 159, 64, 1)'
+                                'rgba(224, 12, 9, 1)',
+                                'rgba(252, 171, 16, 1)',
+                                'rgba(252, 171, 100, 1)',
+                                'rgba(4, 114, 77, 1)',
+                                'rgba(0, 168, 120, 1)',
+                                'rgba(60, 145, 230, 1)',
+                                'rgba(66, 202, 253,  1)',
+                                'rgba(148, 75, 187,  1)',
+                                'rgba(164, 145, 211,  1)',
                             ]
                     }]
                 }}
                 options = {{
-                    minBarLength: 1,
+                    minBarLength: 3,
                     responsive: true,
                     plugins: {
                         legend: {
                             display: true,
-                            align: 'bottom'
+                            align: 'bottom',
+                            labels: {
+                                color: 'rgba(255, 255, 255, 1)'
+                            }
                         }
+                    },
+                    scales: {
+                        color: 'rgba(255, 255, 255, 1)',
+                        x: {
+                            ticks: {
+                                color: 'rgba(255, 255, 255, 1)'
+                            },
+                            grid: {
+                                display: false
+                              }
+                        },
+                        y: {
+                            ticks: {
+                                color: 'rgba(255, 255, 255, 1)'
+                            },
+                            grid: {
+                                color: 'rgba(255, 255, 255, 0.5)'
+                            },
+                        },
+                        },
                     }
-               
-                }}
+                }
             />
             </div>
             <div className='chart-four'>
@@ -171,12 +227,15 @@ const PlanetChart = ({ planetsList }) => {
                             label: '(times) ratio to earth ',
                             data: toEarthRatios,
                             backgroundColor: [
-                                'rgba(255, 99, 132, 1)',
-                                'rgba(54, 162, 235, 1)',
-                                'rgba(255, 206, 86, 1)',
-                                'rgba(75, 192, 192, 1)',
-                                'rgba(153, 102, 255, 1)',
-                                'rgba(255, 159, 64, 1)'
+                                'rgba(224, 12, 9, 1)',
+                                'rgba(252, 171, 16, 1)',
+                                'rgba(252, 171, 100, 1)',
+                                'rgba(4, 114, 77, 1)',
+                                'rgba(0, 168, 120, 1)',
+                                'rgba(60, 145, 230, 1)',
+                                'rgba(66, 202, 253,  1)',
+                                'rgba(148, 75, 187,  1)',
+                                'rgba(164, 145, 211,  1)',
                             ]
                     }]
                 }}
@@ -192,19 +251,23 @@ const PlanetChart = ({ planetsList }) => {
                     responsive: true,
                     indexAxis: 'y',
                     scales: {
-                        text: 'sam',
-                        color: 'rgba(255, 255, 255, 1)',
                         x: {
-                            
-                            color: 'rgba(255, 255, 255, 1)',
-                            grid: {
+                            ticks: {
                                 color: 'rgba(255, 255, 255, 1)'
+                            },
+                            grid: {
+                                // drawTicks: 'true',
+                                // tickColor: 'rgba(255, 255, 255, 1)',
+                                color: 'rgba(255, 255, 255, 0.5)'
                             },
                         },
                         y: {
-                          grid: {
+                            ticks: {
+                                color: 'rgba(255, 255, 255, 1)'
+                            },
+                            grid: {
                             display: false
-                          }
+                            }
                         },
                     }
                 }}
