@@ -1,6 +1,6 @@
 import React from "react";
 import SolarInfo from "./SolarInfo";
-import AllPlanets from "../static/All Planets.jpg";
+import SolarSystemImage from "../static/SolarSystem.png";
 
 //CSS ===============
 import '../static/CSS/SolarSystem.css';
@@ -12,8 +12,8 @@ const SolarSystem = ({solarSystem}) => {
 
     return(
         <div className="solarsystem">
-            <img id="allplanets" src={AllPlanets}/>
-            <h3>The Solar System</h3>
+            <img id="allplanets" src={SolarSystemImage}/>
+            <h3>THE SOLAR SYSTEM</h3>
             <SolarInfo solarSystem={solarSystem}/>
         </div>
     );
