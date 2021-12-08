@@ -81,11 +81,11 @@ const PlanetQuiz = () => {
         <div className="container">
             <div id="home" className="flex-center flex-column">
                 <h1>Quick Planet Quiz!</h1>
-                <h3 className="score">Score: {score}</h3>
+                <div className="score">Score <h1>{score}</h1></div>
                 {questionsList.length > 0 && currentQuestion? (<div id="game" className="justify-center flex-column">
                     <h2 id="question">{currentQuestion.phrase}</h2>
                     {currentQuestion.answer.map((choice, index) => (
-                        <div key={choice} onClick={()=>{
+                        <div id ="answers" key={choice} onClick={()=>{
                             handleAnsweredQuestion(choice, index)
                         }} className={getClassName(index)}>
                             <p className="choice-prefix">{optionTitles[index]}</p>
@@ -97,7 +97,7 @@ const PlanetQuiz = () => {
                 </div>) : 
                 (<div>
                     <h1>Game Over</h1>
-                    <button onClick={handleReset}>Restart</button>
+                    <button id="restart" onClick={handleReset}>Restart</button>
                 </div>)
                 }
             </div>
