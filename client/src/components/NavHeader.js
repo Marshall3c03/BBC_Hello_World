@@ -6,13 +6,16 @@ import '../static/CSS/NavHeader.css';
 function NavHeader(props) {
   
     return (
-      <div class = "Nav">
+      <div class = "header">
+        <Link to='/easteregg'><img id = "easteregg" src = {require('../static/Star.png').default} alt="star"/></Link>
         <img class = "banner-logo"src = {Logo}/>
         <br />
-        <Link to='/home'><button id = "nav-button">Home</button></Link>
-        <Link to='/charts'><button id = "nav-button">Charts</button></Link>
-        <Link to='/quiz'><button id = "nav-button">Quiz</button></Link>
-        <Link to='/about'><button id = "nav-button">About</button></Link>
+        <div class = "navbar">
+          <Link to='/home'><button id = "nav-button">Home</button></Link>
+          <Link to='/charts'><button id = "nav-button">Charts</button></Link>
+          <Link to='/quiz'><button id = "nav-button">Quiz</button></Link>
+          <Link to='/about'><button id = "nav-button">About</button></Link>
+        </div>
       </div>
     );
   }
