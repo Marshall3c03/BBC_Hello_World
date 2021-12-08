@@ -1,18 +1,42 @@
 .all-charts {
     display: flex;
     flex-flow: row wrap;
-    justify-content: start;
-    align-items:flex-start;
-    /* flex-basis: 20px; */
+    justify-content: center;
 
 }
 
-.chart-bar {
-    height: auto;
-    width: 50%;
+.chart-one {
+    background-color: rgba(122, 47, 101, 0.5);
+    border-radius: 20px;
+    margin: 1%;
+    padding: 10px;
+    height: 50%;
+    width: 44%;
 }
 
-.chart-polar {
-    height: auto;
-    width: 50%;
+.chart-two {
+    background-color: rgba(122, 47, 101, 0.5);
+    border-radius: 20px;
+    margin: 1%;
+    padding: 10px;
+    height: 50%;
+    width: 44%;
+}
+
+.chart-three {
+    background-color: rgba(122, 47, 101, 0.5);
+    border-radius: 20px;
+    margin: 1%;
+    padding: 10px;
+    height: 50%;
+    width: 44%;
+}
+
+.chart-four {
+    background-color: rgba(122, 47, 101, 0.5);
+    border-radius: 20px;
+    margin: 1%;
+    padding: 10px;
+    height: 50%;
+    width: 44%;
 }
