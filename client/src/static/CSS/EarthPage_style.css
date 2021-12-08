@@ -1,0 +1,18 @@
+.globe-container{
+    /* justify-content: center; */
+    /* position: absolute; */
+    /* margin-right: 30px; */
+    /* background-color: red; */
+    height: 400px, 50vh;
+    max-height: 400px, 50vh;
+    border-radius: 50px;
+    /* width: 70vw; */
+}
+
+.globe {
+    border-radius: 50px;
+    background-color: purple;
+    height: 400px, 50vh;
+    max-height: 400px, 50vh;
+
+}
