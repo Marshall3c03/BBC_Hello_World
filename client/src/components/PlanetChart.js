@@ -55,7 +55,7 @@ const PlanetChart = ({ planetsList }) => {
     return(
         <>
         <div className='all-charts'>
-            <div className='chart-bar'>
+            <div className='chart-one'>
             <Bar
                 data={{
                     labels: planetNamesBar,
@@ -96,7 +96,7 @@ const PlanetChart = ({ planetsList }) => {
                 }}
             />
             </div>
-            <div className='chart-polar'>
+            <div className='chart-two'>
             <Bar
                 data={{
                     labels: planetNamesPolar,
@@ -130,7 +130,7 @@ const PlanetChart = ({ planetsList }) => {
                 }}
             />
             </div>
-            <div className='chart-bar'>
+            <div className='chart-three'>
             <Bar
 
                 
@@ -163,7 +163,7 @@ const PlanetChart = ({ planetsList }) => {
                 }}
             />
             </div>
-            <div className='chart-polar'>
+            <div className='chart-four'>
             <Bar
                 data={{
                     labels: planetNamesPolar,
