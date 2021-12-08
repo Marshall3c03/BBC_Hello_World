@@ -1,0 +1,12 @@
+#moon {
+    justify-content: right;
+    /* position: relative; */
+    border-radius: 40%;
+    opacity: 0.4;
+    margin-right: 15%;
+    margin-left: 15%;
+    background-color: white;
+    box-shadow: 0 0 200px 200px black inset;
+    max-height: 80vh;
+    max-width: 80vw;
+}
