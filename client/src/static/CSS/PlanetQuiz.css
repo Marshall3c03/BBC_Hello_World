@@ -22,6 +22,7 @@ h1 {
 .container {
     width: 500px;
     margin: auto;
+    margin-bottom: 10%;
     height: 80vh;
     display: flex;
     justify-content: center;
