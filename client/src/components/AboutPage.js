@@ -16,25 +16,25 @@ const AboutPage = () => {
                     <h3 className="names">
                         Anita Safar
                     </h3>
-                    <img id='avatar' src='https://cliply.co/wp-content/uploads/2020/10/442010812_HEADPHONES_AVATAR_3D_400px.gif' alt='person avatar' width="100px"/>
+                    <img id='avatar' src='https://cdna.artstation.com/p/assets/images/images/010/502/410/original/dave-cockburn-psmonkey800400.gif?1524758817' alt='person avatar' width="100px"/>
                 </div>
                 <div className="person">
                     <h3 className="names">
                         Craig Marshall
                     </h3>
-                    <img id='avatar' src='https://cliply.co/wp-content/uploads/2020/09/442008571_ARTIST_AVATAR_3D_400px.gif' alt='person avatar'/>
+                    <img id='avatar' src='https://i.giphy.com/media/xT8qBhrlNooHBYR9f2/giphy.webp' alt='person avatar'/>
                 </div>
                 <div className="person">
                     <h3 className="names">
                         Ross Napier
                     </h3>
-                    <img id='avatar' src='https://cliply.co/wp-content/uploads/2020/09/442008572_ARTIST_AVATAR_3D_400px.gif' alt='person avatar'/>
+                    <img id='avatar' src='https://i.giphy.com/media/xTk9ZGZc51feh9BqX6/giphy.webp' alt='person avatar'/>
                 </div>
                 <div className="person">
                     <h3 className="names">
                         Sam Spencer
                     </h3>
-                    <img id='avatar' src='https://cliply.co/wp-content/uploads/2020/08/442008111_GLANCING_AVATAR_3D_400px.gif' alt='person avatar'/>
+                    <img id='avatar' src='https://i.giphy.com/media/biHH61yRTp0RZGNvxi/giphy.webp' alt='person avatar'/>
                 </div>
             </div>
         </div>
