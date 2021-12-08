@@ -3,7 +3,7 @@ body {
   margin: 20px;
   /* background: linear-gradient(0deg, rgb(102, 1, 107) 0%, rgba(0,0,0) 50%); */
   background-image: url("static/Space.jpg");
-  background-size: cover;
+  background-position: cover;
   color: white;
 }
 
