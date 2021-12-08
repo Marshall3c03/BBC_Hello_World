@@ -16,43 +16,51 @@ h4 {
 h1 {
     font-size: 5.4 rem;
     color: white;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
 .container {
-    width: 100vw;
+    width: 500px;
+    margin: auto;
     height: 80vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
 }
 
 .choice-container:hover {
     cursor: pointer;
-    box-shadow: 0 0.4rem 1.4rem 0 rgba(86,185,235,0.5);
+    box-shadow: 0 0 15px 3px white;
     transform: translateY(-0.1rem);
     transition: transform 150ms;
 }
 
 .choice-container {
     display: flex;
-    margin-bottom: 0.5rem;
-    width: 100%;
+    margin-bottom: 10px;
+    width: 500px;
+    height: 80px;
     font-size: 1.8rem;
-    border: 0.1rem solid rgb(86, 165, 235, 0.25);
-    background-color: white;
+    border: 1px solid grey;
+    background-color: rgba(0, 0, 0, 0.514);
+    border-radius: 60px;
 }
 
 .choice-prefix {
-    padding:  1.5rem 2.5rem;
-    background-color: rgb(86, 13, 96);
-    /* background-color: #56a5eb; */
+    padding: 15px;
     color: white;
+    height: 60px;
+    width: 60px;
+    border: solid white 1px;
+    border-radius: 30px;
+    position: relative;
+    top: 8px;
+    left: 9px;
 }
 
 .choice-text {
     padding: 1.5rem;
-    color: black;
+    color: white;
 }
 
 .score {
@@ -61,23 +69,36 @@ h1 {
 
 .wrong-container {
     display: flex;
-    margin-bottom: 0.5rem;
-    width: 100%;
+    margin-bottom: 10px;
+    width: 500px;
+    height: 80px;
     font-size: 1.8rem;
-    border: 0.1rem solid rgb(86, 165, 235, 0.25);
+    border: 1px solid grey;
     background-color: red;
+    border-radius: 60px;
 }
 
 .right-container {
     display: flex;
-    margin-bottom: 0.5rem;
-    width: 100%;
+    margin-bottom: 10px;
+    width: 500px;
     font-size: 1.8rem;
-    border: 0.1rem solid rgb(86, 165, 235, 0.25);
+    border: 0.1rem solid grey;
     background-color: rgb(62, 198, 110);
+    border-radius: 60px;
 }
 
 .fact {
     font-size: 24px;
     margin-top: 6%;
+}
+
+#restart {
+    width: 500px;
+    height: 80px;
+    font-size: 1.8rem;
+    border: 1px solid grey;
+    background-color: rgba(0, 0, 0, 0.514);
+    border-radius: 60px;
+    color: white;
 }
