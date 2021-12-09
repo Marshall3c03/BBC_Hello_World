@@ -114,7 +114,7 @@ const EarthPage = () => {
         globeGlowColor: 'white',
         markerRadiusScaleRange: [0.3, 0.3],
         markerTooltipRenderer: marker => { const tooltipContent = document.createElement("div");
-                                            tooltipContent.innerHTML = `<div style='background-color:black;' ><img src="${marker.image}" /> ${marker.facility} at (${marker.location})</div>`; 
+                                            tooltipContent.innerHTML = `<div style='background-color:black;' > ${marker.facility} at (${marker.location})</div>`; 
                                             return tooltipContent;
                                         }
       };
