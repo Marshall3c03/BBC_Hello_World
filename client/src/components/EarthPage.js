@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ReactGlobe from 'react-globe';
-import { allMarkers } from './markers.js';
+// import { allMarkers } from './markers.js';
 
 //CSS ===============
 import '../static/CSS/EarthPage_style.css' ;
