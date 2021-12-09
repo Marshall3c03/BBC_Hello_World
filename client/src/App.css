@@ -9,7 +9,7 @@ body {
 
 .page-components{
   display: flex;
-  /* justify-content:; */
+  justify-content:center;
   flex-flow: column nowrap;
   gap: 10px;
   margin: 20px;
